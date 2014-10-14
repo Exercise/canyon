@@ -37,6 +37,12 @@ ul.menu li {
 ul.menu li a {
     font-style: normal;
 }
+ul.nolist {
+    list-style: none outside none!important;
+}
+ul.nolist li {
+    list-style: none outside none!important;
+}
 a.button {
     display: inline-block;
     -webkit-box-sizing: border-box;
@@ -61,6 +67,24 @@ main {
 }
 .white {
     background: #fff;
+}
+.fontlight {
+    font-weight: 300;
+}
+.fontlight strong {
+    font-weight: 400;
+}
+.nomargin {
+    margin: 0!important;
+}
+.nopadding {
+    padding: 0!important;
+}
+.nopadding-top {
+    padding-top: 0!important;
+}
+.nopadding-bottom {
+    padding-bottom: 0!important;
 }
 
 #layout > footer {
@@ -205,6 +229,8 @@ body.sales section.main > header {
     text-align: center;
     padding: 10em 0;
 }
+body.sales main > header h1,
+body.sales section.main > header h1,
 body.sales main > header h2,
 body.sales section.main > header h2 {
     display: inline-block;
@@ -217,6 +243,10 @@ body.sales section.main > header h2 {
     margin: 0;
     line-height: normal;
 }
+body.sales main > header h1:before,
+body.sales section.main > header h1:before,
+body.sales main > header h1:after,
+body.sales section.main > header h1:after,
 body.sales main > header h2:before,
 body.sales section.main > header h2:before,
 body.sales main > header h2:after,
@@ -230,10 +260,14 @@ body.sales section.main > header h2:after {
     height: 1px;
     top: 50%;
 }
+body.sales main > header h1:before,
+body.sales section.main > header h1:before,
 body.sales main > header h2:before,
 body.sales section.main > header h2:before {
     left: 0;
 }
+body.sales main > header h1:after,
+body.sales section.main > header h1:after,
 body.sales main > header h2:after,
 body.sales section.main > header h2:after {
     right: 0;
@@ -308,18 +342,18 @@ body.sales section.main > header h2:after {
     overflow: hidden;
     line-height: 1.275em;
 }
-#about_our_program {
+body.sales main {
     padding-bottom: 14em;
 }
-#about_our_program article {
+body.sales main article {
     text-align: center;
     font-size: 3em;
     margin: 0 2.6667em;
 }
-#about_our_program article > div {
+body.sales main article > div {
     text-align: left;
 }
-#about_our_program article h2 {
+body.sales main article h2 {
     font-size: 1.4667em;
     line-height: 1.3636em;
     color: #1c99cf;
@@ -328,56 +362,135 @@ body.sales section.main > header h2:after {
     width: 90%;
     margin: 2.5em auto;
 }
-#about_our_program article h2 strong {
+body.sales main article h2 strong {
     font-weight: 600;
 }
-#about_our_program article h3 {
+body.sales main article h3 {
     font-weight: 700;
     color: #1c99cf;
     font-size: 1.1333em;
     margin: 3.5em 0 2em 0;
 }
-#about_our_program article h3 + p {
-    margin-top: 0!important;
-}
-#about_our_program article h4 {
+body.sales main article h4 {
     font-size: 1em;
     text-transform: uppercase;
     font-weight: 400;
     margin: 3em 0 1.2em 0;
 }
-#about_our_program article h4 strong {
+body.sales main article h4 strong {
     font-weight: 600;
 }
-#about_our_program article p {
+body.sales main article div.wide h4 {
+    font-weight: 600;
+}
+body.sales main article p {
     margin-top: 1em;
 }
-#about_our_program article p strong {
+body.sales main article hr {
+    width: 5.3333em;
+    display: block;
+    height: 1px;
+    color: rgba(255,255,255,0);
+    background: #c2b4b4;
+    line-height: 1px;
+    border-bottom: 1px #e9e4e4 solid;
+    border-left: 0 none;
+    border-right: 0 none;
+    border-top: 0 none;
+    margin: 3.6667em auto;
+}
+body.sales main article h2 + p,
+body.sales main article h3 + p,
+body.sales main article h4 + p,
+body.sales main article > *:first-child {
+    margin-top: 0!important;
+}
+body.sales main article p strong {
     font-weight: 600;
 }
-#about_our_program article ul {
+body.sales main article ul {
     text-align: left;
     padding: 0 0 0 1.9em;
     list-style: none outside none;
 }
-#about_our_program article ul li {
+body.sales main article ul li {
     line-height: 1.1667em;
     margin: 0.5em 0 0 0;
     text-indent: -1.9em;
 }
-#about_our_program article ul li:before {
+body.sales main article ul li:before {
     content: "·";
     display: inline-block;
     width: 1.9em;
     text-align: left;
     text-indent: 0;
 }
-#about_our_program article ul + p {
+body.sales main article ul + p {
     text-align: left;
 }
-#about_our_program article small {
+body.sales main article small {
     font-size: 0.8667em;
 }
-#about_our_program article > .wide {
+body.sales main article table {
+    margin: 1.5em 0;
+}
+body.sales main article > .wide {
     margin: 4em -2.6667em 1em -2.6667em;
+}
+table.full {
+    width: 100%;
+}
+table.noborder,
+table.noborder tr,
+table.noborder td,
+table.noborder th {
+    border: 0 none;
+}
+table tr,
+table td,
+table th {
+    padding: 1em 2em;
+    vertical-align: top;
+}
+table tr > * {
+    border-left: 1px #ac9999 solid;
+}
+table tr > *:first-child {
+    border-left: 0 none;
+    padding-left: 0;
+}
+table tr > *:last-child {
+    padding-right: 0;
+}
+table tr:first-child > * {
+    padding-top: 0;
+}
+table tr:last-child > * {
+    padding-bottom: 0;
+}
+table.border-h tr:first-child > * {
+    border-bottom: 1px #ac9999 solid;
+}
+table *.noborder {
+    border: 0 none!important;
+}
+table th {
+    font-weight: 600;
+}
+table small {
+    opacity: 0.5;
+    font-style: italic;
+}
+body.sales main article table h4,
+body.sales main article table p {
+    margin: 0;
+}
+body.sales main article ul.nolist li:before {
+    content: "-";
+    text-align: right;
+    width: 1.5em;
+    padding-right: 0.4em;
+}
+body.sales main article .fontlight p strong {
+    font-weight: 400;
 }
