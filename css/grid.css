@@ -1,0 +1,74 @@
+.rows, .row {
+    display: table;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.rows.fullheight,
+.row.fullheight {
+    height: 100%;
+}
+.rows > .row {
+    display: table-row;
+    margin: 0;
+    padding: 0;
+}
+.row > .column {
+    display: table-cell;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 1px;
+}
+.row > .column.one,
+.row > .column.two,
+.row > .column.three,
+.row > .column.four,
+.row > .column.five,
+.row > .column.six,
+.row > .column.seven,
+.row > .column.eight,
+.row > .column.nine,
+.row > .column.ten,
+.row > .column.eleven,
+.row > .column.twelve {
+    height: auto;
+}
+.row > .column.one {
+    width: 8.333333%;
+}
+.row > .column.two {
+    width: 16.666667%;
+}
+.row > .column.three {
+    width: 25%;
+}
+.row > .column.four {
+    width: 33.333333%;
+}
+.row > .column.five {
+    width: 41.666667%;
+}
+.row > .column.six {
+    width: 50%;
+}
+.row > .column.seven {
+    width: 58.333333%;
+}
+.row > .column.eight {
+    width: 66.666667%;
+}
+.row > .column.nine {
+    width: 75%;
+}
+.row > .column.ten {
+    width: 83.333333%;
+}
+.row > .column.eleven {
+    width: 91.666667%;
+}
+.row > .column.twelve {
+    width: 100%;
+}

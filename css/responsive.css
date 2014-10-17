@@ -1,0 +1,20 @@
+@media only screen and (max-width: 1279px) {
+    body {
+        font-size: 9px;
+    }
+}
+@media only screen and (max-width: 1155px) {
+    body {
+        font-size: 8px;
+    }
+}
+@media only screen and (max-width: 1030px) {
+    body {
+        font-size: 7px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    body {
+        font-size: 6px;
+    }
+}
