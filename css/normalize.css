@@ -1,10 +1,10 @@
-address,article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary,ins {
+address,article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
     display: block;
 }
 audio,canvas,video {
     display: inline-block;
 }
-time {
+time,ins {
     display: inline;
 }
 audio:not([controls]) {
