@@ -15,10 +15,12 @@ body {
 a {
     color: #1c99cf;
     text-decoration: underline;
-    font-style: italic;
 }
 a:hover {
     text-decoration: none;
+}
+body.sales a {
+    font-style: italic;
 }
 p {
     margin: 0;
@@ -442,6 +444,9 @@ body main article > *:first-child {
 body main article p strong {
     font-weight: 600;
 }
+body main article p strong b {
+    font-weight: 900;
+}
 body main article ul {
     text-align: left;
     padding: 0 0 0 1.9em;
@@ -462,10 +467,13 @@ body main article ul li:before {
     text-align: left;
     text-indent: 0;
 }
+body main article ul.nolist li:before {
+    display: none;
+}
 body.sales main article ul li:before {
     width: 1.9em;
 }
-body main article ul li *.
+body main article ul li *,
 body.sales main article ul li * {
     text-indent: 0;
 }
