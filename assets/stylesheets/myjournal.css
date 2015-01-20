@@ -1,0 +1,231 @@
+#journal_wrapper {
+	width: 543px;
+	height: 409px;
+	max-height: 409px;
+	margin: 0 auto;
+	background:#ECEBE1;
+	overflow-x: hidden;
+	/*margin: 0px;*/
+}
+#journal_innerWrapper {
+	width: 541px;
+	height: 405px;
+	margin-left:1px;margin-top:1px;
+	background:#fff;
+	border:1px solid #000;
+}
+#journal_headerWrapper1{
+	margin-top: 0px;
+	margin-left: 0px;
+}
+#journal_headerWrapper2{
+	padding-top: 4px;
+	padding-bottom:4px;
+	margin-left: 0px;
+}
+
+#journal_content {
+	float: left;
+	width: 504px;
+	height: 322px;
+	background-color: #FFFFFF;
+	margin-top: -1px;
+	margin-left: 20px;
+	border: 1px solid #54301A;
+	background:url('../images/white_notepad.png') repeat-y;
+	background-size:504px 322px;
+}
+#journal_title {
+	float: left;
+	font-family: StoneSansSemiBold;
+	padding-top: 10px;
+	padding-left: 22px;
+	width: 504px;
+	height: 68px;
+	padding-bottom:0px;
+}
+#journal_title p {
+	color: #244b74;
+	display: inline;
+}
+#journal_title h2{
+	font-weight: normal;
+	font-family: StoneSansSemiBold;
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+#journal_title h3 {
+	font-size: 12px;
+	font-family: StoneSansBold;
+	display: inline-block;
+	font-weight: normal;
+	text-align: center;
+	min-width: 285px;
+}
+#journal_title span {
+	display: inline;
+}
+#journal_name {
+	font-size: 20px;
+	font-family: StoneSansSemiBold;
+}
+#journal_print {
+	cursor:pointer;
+	font-family: StoneSans;
+	font-size: 11.5px;
+	float:right;
+}
+
+.journal_blueButton {
+	background-color: #244b74;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #244b74;
+	color: #FFFFFF;
+}
+#journal_prevNoteBtn{
+	float:left;
+	cursor:pointer;	
+	width:118px!important;
+	height:25px!important;
+	background:url("../images/previous_note.png");
+	border:none!important;
+}
+#journal_nextNoteBtn{
+	float: right;
+	cursor:pointer;
+	width:90px!important;
+	height:25px!important;
+	background:url("../images/next_note.png");
+	border:none!important;
+}
+#journal_entries{
+	width: 100%;
+}
+#journal_entries tr td{
+	vertical-align:top;
+}
+#journal_entries p{
+	margin-top:0px;
+	word-break: break-all;
+    word-wrap: break-word;
+}
+#journalBackground {
+
+}
+#journal_topContent {
+	width: 100%;
+	float: left;
+}
+#journal_topContent h3 {
+	font-family: StoneSansBold;
+	font-size: 11px;
+	padding-left: 12px;
+	margin-top:8px;
+	float: left;
+	font-weight: normal;
+}
+.journal_time {
+	float: left;
+	font-size: 11.5px;
+	margin-top: 0px;
+	margin-left: 10px;
+	font-family:StoneSans;
+}
+.journal_time h4{
+	vertical-align: top;
+	margin: 0;
+	line-height: 19px;
+}
+
+#journal_bottomContent {
+	/*width: 100%;*/
+	width:504px;
+	margin-top:20px;
+	height:260px;
+	max-height:260px;
+	float: left;
+	overflow:auto;
+	/*overflow-y:scroll;overflow-x:hidden;*/
+	/*min-height for no scroll, max for scroll*/
+}
+#journal_field {
+	width: 379px;	
+	float: left;
+	margin-top: 23px;
+	height: 100px;
+	margin-left: 59px;
+}
+#journal_clickHere{
+	width: 379px;
+	background-color: #FFFFFF;
+	border-color: #54301A;
+	border-width: 1px;
+	border-style: solid;
+	float: left;
+	margin-top: 23px;
+	height: 15px;
+	margin-left: 59px!important;
+	font-size:12px;
+	font-family:StoneSansItalic;
+	font-weight:normal;
+	cursor:pointer;
+}
+#journal_newEntry{
+	width:375px;height:80px;border:0;resize:none;font-family:StoneSans;
+}
+#journal_write {
+	height: 80px;
+	width: 381px;
+	float: left;
+}
+#journal_write p {
+	
+}
+#journal_save {
+	background-color: #ECEBE1;
+	height: 20px;
+	width:379px;
+	/*position: absolute;*/
+	margin-top: 80px;
+
+}
+#journal_save h3 {
+	float: right;
+	margin-right: 25px;
+	font-size: 11.5px;
+	font-family: StoneSans;
+	padding-bottom: 0;
+	margin-top: 3px;
+	cursor:pointer;
+}
+#journal_dateH3{
+	position: relative;bottom: 6px;
+}
+.journal_post {
+	float: left;
+	width: 387px;
+	height: auto;
+	font-size: 12px;
+	font-family: StoneSans;
+	margin-top: 0px;
+	line-height: 19px;
+	overflow-wrap: break-word;
+}
+.journal_post p {
+	margin: 0;
+	margin-left: 25px;
+}
+#journal_edit_entry{
+	text-align: right;
+	width: 92%;
+	color: rgb(0, 158, 160);
+	font-family: StoneSans;
+	font-size: 11.5px;
+}
+#journal_personal{
+	text-align: left;
+	font-family: StoneSans;
+	font-size: 9.5px;
+}

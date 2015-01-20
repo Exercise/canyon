@@ -1,0 +1,560 @@
+.semiBold {
+	font-family: StoneSansSemiBold;
+}
+
+.hidden {
+	display:none;
+}
+
+a {
+	cursor:pointer;
+}
+
+span.cancel{
+	font-family:StoneSansBold, Myriad Pro, sans-serif;
+	font-size:11px;
+	position: relative;
+	right: 5px;
+}
+#account_bottom_inner{
+	float:right;
+	margin-top:12px;
+}
+
+#vr {
+	width: 1px;
+	height: 330px;
+	background-color: #ccc;
+	margin-top: 24px;
+	float: left;
+}
+
+#account_rightContent {
+	float: left;
+	margin-left: 25px;
+	width: 400px;
+	min-height: 375px;
+}
+
+#account_upperRightInner{
+	border:1px solid #390803;
+	width:394px;
+	height:189px;
+	float:left;
+	margin-left:2px;
+	margin-top:2px;
+}
+#upperRight {
+	width: 400px;
+	height: 195px;
+	border: 1px solid #B4A49C;
+	float: left;
+	margin-left: 10px;
+	margin-top: 28px;
+	margin-bottom: 10px;
+	background:#F6F5F1;
+}
+#upperRight h3 {
+	display: inline-block;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+#upperRight button {
+	margin-left: 249px;
+	padding-bottom: 16px;
+}
+#upperRight ul li { 
+	line-height:16px; 
+	margin-bottom: 10px;
+}
+
+
+#lowerRight {
+	float: left;
+	width: 400px;
+	height: 115px;
+	margin-left: 10px;
+	margin-top: 8px;
+}
+#lowerRight ul li { 
+	height:28px;
+	line-height:16px; 
+}
+
+#account_wrapper .second { 
+	font-family: StoneSans;
+	font-size: 13px;
+	display: inline;
+}
+
+h4 {
+	font-family: StoneSansSemiBold;
+	font-size: 13px;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+h4.first {
+	width: 115px;
+}
+.firstZip {
+	width: 60px;
+	margin-left: 8px;
+}
+#change-account .firstZip { width:63px; }
+#change-account {}
+#change-account .first {}
+#change-account input {}
+#change-email {}
+#change-email .first {width: 155px;}
+#change-email input {width: 245px;}
+#change-password {}
+#change-password .first {width: 135px;}
+#change-password input {width: 265px;}
+
+
+.fleft {
+	float: left;
+}
+.fright {
+	float: right;
+}
+
+/*
+#upperRight span {
+	margin-left: 169px;
+}
+.address {
+	margin-top: 16px;
+}
+.country {
+	margin-top: 6px;
+}
+.phone {
+	margin-top: 17px;
+}
+*/
+/*
+.lowerSpace {
+	margin-top: 16px;
+}
+*/
+#change, #change1{
+	float: left;
+	margin-left: 360px;
+}
+#change a, #change1 a{
+	text-decoration: none;
+	color: #40688D;
+	font-family: StoneSans;
+	font-size: 13px;
+}
+#change {
+	margin-top: -52px;
+}
+#change1 {
+	margin-top: -20px;
+}
+/* password.html and email.html specifc styles*/
+
+.alert {
+	display:none;
+	width: 430px;
+	height: 300px;
+/*	border: 1px solid #CBB59C; */
+	/*margin-left: 240px;
+	margin-top: 70px;*/
+	background-color: #fff;
+	margin-left: 10px;
+}
+.alert h3 {
+	margin-top: 18px;
+	margin-bottom: 0px;
+}
+.alert ul {
+	margin: 0;
+	padding: 0;
+	margin-top: 10px;
+}
+.alert li {
+	margin-top: 5px;
+}
+.liSpace {
+	margin-top: 10px;
+}
+/*
+.alert h4 {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	font-family: StoneSansSemiBold;
+	font-size: 13px;
+}
+*/
+.alert input {
+	display: inline-block;
+	width: 285px;
+	height: 20px;
+}
+#stateIn {
+	width: 135px;
+}
+#zipIn {
+	width: 70px;
+}
+
+/*
+.editInput {
+	display: inline-block;
+	width: 235px;
+	height: 20px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+*/
+/*
+#state {
+	margin-left: 75px;
+	width: 135px;
+}
+#stateLI {
+	display: inline-block;
+}
+#zip {
+	margin-left: ;
+	width: 70px;
+}
+#zipLI {
+	display: inline-block;
+}
+*/
+
+
+#currentInput{
+	margin-left: 29px;
+}
+#newInput{
+	margin-left: 46px;
+}
+#confirmInput{
+	margin-left: 24px;
+}
+.info {
+	font-family: StoneSansItalic;
+	font-size: 13px;
+	margin-left: 30px;
+	margin-top:20px;
+	/*margin-top: 46px*/
+}
+.cancel {
+	text-decoration: none;
+	font-size: 13px;
+	font-family: StoneSansBold;
+	padding-right:10px;
+}
+.cancelSmall,a.cancelSmall{
+	font-family:StoneSansBold, Myriad Pro, sans-serif;
+	font-size:11px;
+	position: relative;
+	right: 5px;
+}
+/*
+span.cancel{
+	font-family:StoneSansBold, Myriad Pro, sans-serif;
+	font-size:11px;
+	color:#003366;
+	position: relative;
+	right: 5px;
+}
+*/
+.buttons {
+	margin: 0;
+	padding: 0;
+	float: left;
+	margin-left: 282px;
+	margin-top: -10px;
+}
+
+/* edit.html specifc styles*/
+#newEmailInput {
+	margin-left: 51px;
+	width: 205px;
+}
+#confirmEmailInput {
+	margin-left: 29px;
+	width: 205px;
+}
+/*
+#topSpace {
+	margin-top: 30px;
+}
+#alertSpace {
+	margin-left: 25px;
+}
+*/
+#emailButtons {
+	margin-left: 278px;
+	margin-top: 2px;
+}
+#alertSize {
+	width: 430px;
+	height: 345px;
+}
+/*
+#editUL {
+	margin: 0;
+	padding: 0;
+	margin-left: 28px;
+	margin-top: 16px;
+	font-family: StoneSansSemiBold;
+	font-size: 13px;
+}
+.editLI {
+	margin-top: 5px;
+}
+*/
+#editButtons {
+	margin-left: 281px;
+	margin-top: -25px;
+}
+
+/*
+#fName{
+	margin-left: 40px;
+}
+#lName{
+	margin-left: 42px;
+}
+#address {
+	margin-left: 57px;
+}
+#city {
+	margin-left: 81px;
+}
+#country {
+	margin-left: 56px;
+}
+#home {
+	margin-left: 69px;
+}
+#mobile {
+
+}
+#mobile span {
+	font-family: StoneSansItalic;
+}
+*/
+
+#pageContainer {}
+
+#backToHomepageContainer {
+	margin:0 auto;
+	width:975px;
+	padding-bottom:25px;
+}
+
+#backToHomepageLink {
+	overflow:auto;
+	cursor:pointer;
+	float:left;
+}
+
+#backToHomepageArrow {
+	padding-right: 5px;
+}
+
+#backToHomepageText {
+	font-family: StoneSans, Myriad Pro, sans-serif;
+	font-size: 17px;
+}
+
+#accountContainer {
+	padding:15px;
+	margin:0 auto;
+	width:950px;
+	background-color:#ECEBE1;
+	font-family:StoneSans;
+	font-size: 13px;
+}
+
+#innerAccountContainer {
+	padding:10px 30px 20px 30px;
+	border:1px solid #D6CCC7;
+	background-color:#FFFFFF;
+	overflow:auto;
+}
+
+#accountLeftColumn {
+	float:left;
+	width:444px;
+	border-right: 1px solid #CCCCCC;
+}
+
+.leftSection {
+	clear:both;
+}
+
+h1.accountHeading {
+	font-size: 20px;
+	font-family: StoneSansSemiBold;
+	font-weight: normal;
+	padding-bottom:5px;
+}
+
+h2.subHeading {
+	font-family: StoneSansSemiBold;
+	font-size: 16px;
+	margin:0px;
+	padding-bottom:10px;
+}
+.contentIndent {
+	padding-left:30px;
+	padding-bottom:30px;
+}
+
+#accountLeftColumn .leftColLeft {
+	float:left;
+	width:150px;
+}
+
+#accountLeftColumn .leftColRight {
+	margin-left:150px;
+}
+
+span.leftPadding {
+	padding-left:20px;
+}
+
+#accountRightColumn {
+	margin-left:444px;
+	padding-left:20px;
+	border-left: 1px solid #CCCCCC;
+}
+
+.boxWrapper {
+	background-color:#F6F5F1;
+	border: 1px solid #B4A49C;
+	padding:1px;
+}
+
+.box {
+	border: 1px solid #390803;
+	padding:10px;
+}
+
+.box h2 {
+	display:inline-block;
+}
+
+#edit-wrapper.bluebtn, #edit-wrapper-cc.bluebtn {
+	float:right;
+}
+
+.box .contentIndent {
+	min-height:10px;
+	padding-bottom:15px;
+}
+
+.box .rowLeft {
+	display:inline;
+	width:115px;
+	float:left;
+	padding-right:25px;
+}
+
+.box .rowRight {
+	margin-left:140px;
+}
+
+#creditCardInfoBox {
+	margin-top:15px;
+}
+
+.rightColumnBottomContainer {
+	display:inline-block;
+	padding-top:20px;
+	margin-left:43px;
+}
+
+.row {
+	clear:both;
+}
+
+.leftColumn {
+	float:left;
+	width:130px;
+	padding-right:10px;
+}
+
+.rightColumn {
+	margin-left:140px;
+	word-wrap:break-word;
+}
+
+.leftSection .left {
+	float:left;
+	width:170px;
+	padding-right:10px;
+	word-wrap:break-word;
+}
+
+.leftSection .right {
+	margin-left:180px;
+}
+
+#cancelContainer {
+	margin:0 auto;
+	width:980px;
+	padding:15px 0px 0px 0px;
+	text-align:right;
+}
+#securityCodeInVisible {
+	width:75px;
+}
+.lightbox {
+	display:none;
+}
+/*Credit Card Error Message Alignment Issues Fix*/
+#changeCreditCard .info { margin-right: 30px; }
+#changeCreditCard .errordiv { height: auto; padding-bottom: 10px; width: 100%; }
+/*Font Family & Size Fix for My Account - Supported Devices*/
+#jawbone-info-popup, 
+#fitbit-info-popup {
+	font-family: StoneSans;
+    font-size: 13px;
+}
+
+.tablet .fancybox-close { background-position:center center; width:33px; height:33px; }
+
+/*added for change email address popup error alignment*/
+#changeEmail .info {
+	margin-left: 0;
+}
+#changeEmail .errordiv {
+    font-size: 11px;
+    height: auto;
+    margin: 0 auto;
+    padding: 7px 12px;
+	width: 89%;
+	float: none;
+}
+
+#changeEmail #xBtn {
+    margin: 0 7px 0 0;
+    position: static;
+}
+
+#changeEmail .errordiv span {
+    display: inline-block;
+    float: left;
+    position: static;
+    width: 90%;
+	padding-top: 1px;
+}
+
+/*added for word wrapping issue*/
+.box .rowRight span {
+    word-break: break-all;
+    word-wrap: break-word;
+	display: inline-block;
+}

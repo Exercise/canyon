@@ -1,0 +1,75 @@
+#recipe_lightbox{
+	float:left;
+	margin:0 auto;
+	width:938px;
+	height:600px;
+	border:1px solid #CFB9A2;
+	box-shadow:2px 2px 1px #999;
+	overflow:hidden;
+	/*overflow-x:hidden;overflow-y:scroll;*/
+}
+#recipe_lightbox h2{
+	font-family:StoneSansSemiBold;
+	font-size:28px;
+	font-weight:normal;
+	color:#003366!important;
+}
+#recipe_lightbox .caption{
+	font-family:StoneSans;
+	font-size:11px;
+	font-weight:normal;
+	margin-top:10px;
+	margin-bottom:15px;
+}
+#printLink{
+	font-family:StoneSans;
+	font-size:11px;
+	font-weight:normal;
+	position:absolute;
+	top:7px;
+	right:36px;
+}
+#recipe_lightbox hr{
+	width:542px;
+	/*html5 boilerplate hr code with our color*/
+	display: block; height: 1px;
+    border: 0; border-top: 1px solid #E1D3C5;
+    margin: 0 0; padding: 0;
+	/*end boilerplate hr code*/
+}
+#recipe_lightbox h3.subHeader{
+	font-family:StoneSansSemiBold;
+	font-size:13.5px;
+	font-weight:normal;
+}
+#recipe_lightbox p{
+	font-family:StoneSans;
+	font-size:13.5px;
+	font-weight:normal;
+	margin-bottom:20px;
+}
+#recipe_lightbox .moreVideos{
+	width:149px!important;
+	height:25px;
+	background:url("../images/moreVideosBtn.png");
+	border:none!important;
+	display:none;
+}
+#recipe_info{
+	width:542px;margin:0;padding:0;
+}
+#recipe_info tr{
+	width:100%;
+}
+#recipe_info tr.alt{
+	background:#ECEBE1;
+}
+#recipe_info td{
+	height:22px!Important;
+	line-height:22px!important;
+	width:50%!important;
+	margin:0;padding:0;
+	font-family:StoneSans;
+	font-size:13.5px;
+	font-weight:normal;
+}

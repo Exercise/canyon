@@ -1,0 +1,218 @@
+/* .jqplot-axis { font-family:StoneSansSemiBold, Myriad Pro, sans-serif; color:#603F2A; } */
+
+/*end jqplot styles*/
+
+#tracker-tab .ui-accordion-content {
+	padding: 1em 0em 1em 0em;
+}
+
+
+#tracker-tab #trackerBtn{
+	width: 539px;
+	height: 32px;
+	background:url('../images/trackerBtn.png');
+	float:left;
+	margin-top:5px;
+}
+
+#tracker-tab #viewChartBtn{
+	width: 539px;
+	height: 32px;
+	background:url('../images/viewChartBtn.png');
+	float:left;
+}
+#tracker-tab #trackerContent{
+	float: left;
+	margin-left: 2px;
+	margin-top: 2px;
+	/*border: 1px solid #000;*/
+	background: #fff;
+	width:100%;
+}
+
+#tracker-tab #trackerContent.chart{
+	padding-bottom:25px;
+}
+
+#tracker-tab #trackerContent h2{
+	font-family:StoneSansBold, Myriad Pro, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+}
+#tracker-tab #trackerContent p.subHeader{
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	font-size:13px;
+	font-weight:normal;
+	margin:0;padding:0;
+	margin-left:10px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+#tracker-tab #trackerContent hr {
+	/*html5 boilerplate hr code with our color*/
+	display: block; height: 1px;
+    border: 0; border-top: 1px solid #EDECE2;
+    margin: .1em auto; padding: 0;
+	/*end boilerplate hr code*/
+	width:96%;
+}
+#tracker-tab #trackerContent ul {
+	list-style-type:none;
+	margin:0;padding:0;
+	width:100%;
+	text-align:center;
+}
+#tracker-tab #trackerContent li {
+	width:20%;
+	text-align:center;
+	margin-left:5px;
+	font-family:StoneSansSemiBold, Myriad Pro, sans-serif;
+	font-size:13px;
+	font-weight:normal;
+	display:inline-block;
+}
+
+#tracker-tab #trackerContent p.i {
+	font-family:StoneSansItalic, Myriad Pro, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	margin-top:3px;
+	margin-left:10px;
+}
+#tracker-tab #trackerContent table{margin-left:15px;}
+#tracker-tab #trackerContent table tr td{
+	padding-right:5px;
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	font-size:13px;
+	font-weight:normal;
+}
+#tracker-tab #trackerContent table td{padding-top:20px;}
+#tracker-tab #trackerContent table td.firstRow{padding-top:0px}
+#tracker-tab #trackerContent table tr td span.left{
+	font-family:StoneSansSemiBold, Myriad Pro, sans-serif;
+	font-size:13px;
+	font-weight:normal;
+	position: relative;
+	bottom: 12px;
+}
+#tracker-tab #trackerContent table tr td p{
+	margin-top:0px;margin-bottom:0px;padding:0;
+}
+/* webkit solution */
+#tracker-tab ::-webkit-input-placeholder { text-align:center; }
+/* mozilla solution */
+#tracker-tab input:-moz-placeholder { text-align:center; }
+#tracker-tab #trackerContent table tr td input{
+	margin-left:95px;
+	font-family:StoneSansSemiBold, Myriad Pro, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	border-radius:5px;
+	width:143px;
+}
+
+#tracker-tab #trackerContent table tr td div.lbl {
+	display:none;
+	margin-left:95px;
+	font-family:StoneSansSemiBold, Myriad Pro, sans-serif;
+	font-size:14px;
+	width:143px;
+	font-weight:bold;
+	text-align:center;
+	padding:5px;
+}
+
+/*tracker no data*/
+#tracker-tab #tracNoData_wrapper{
+	width:441px;
+	padding-left: 20px;
+	height:88px;
+	border:1px solid #CCCCCC;
+	box-shadow:0px 0px 5px #CCCCCC;
+}
+#tracker-tab #tracNoData_wrapper h2{
+	font-size:18px;
+	margin-bottom: 10px;
+}
+
+#tracker-tab #tracNoData_wrapper p{
+	margin-top: 0px;
+	font-family: StoneSans;
+	font-size: 14px;
+}
+
+#tracker-tab .error{background:#FEE7DD;}
+#tracker-tab .errordiv{
+	visibility: hidden;
+	/*width:229px;229+82=325px total*/
+	width: 289px;
+	height:22px;/*32px total*/
+	margin-top: -3px;
+	padding-top:10px;
+	margin-left: 30px;
+	float:left;
+	background:#F76929;
+	display:inline-block;
+	/*font styles*/
+	font-family:StoneSansBold, Myriad Pro, sans-serif;
+	font-size:10px;
+	color:#fff;
+	z-index:0;
+}
+#tracker-tab .errorText{padding-left: 5px;}
+#tracker-tab .xBtn{
+	display:none;
+	width:19px;
+	height:19px;
+	float:left;
+	margin-left: 5px;
+	margin-top: -3px;
+	background:url('../../images/xBtn1.png');
+	z-index:10;
+	cursor:pointer;
+}
+
+/*next/cancel*/
+#tracker-tab #trac_btmContent{
+	margin-top: 42px;
+	width:100%;
+}
+
+#tracker-tab #buttons {
+	float:right;
+	padding-right:10px;
+}
+
+#tracker-tab span.cancel{
+	position:static;
+	cursor:pointer;
+	font-family:StoneSansBold, Myriad Pro, sans-serif;
+	font-size:11px;
+}
+#tracker-tab .nextBtn{
+	display:inline-block;
+ 	border:3px solid #fff;
+	font-family:StoneSansBold, Myriad Pro, sans-serif;
+	font-size:11px;
+	cursor:pointer;
+}
+
+#tracker-tab .nextBtn:disabled {
+	opacity:0.5;
+	cursor:default;
+}
+
+#tracker-tab input.disabled{background:#ccc!important;outline:1px solid #ccc!important;}
+
+.arrows.left {
+	padding-right:10px;	
+}
+
+.arrows.right {
+	padding-left:10px;	
+}
+
+/*added for My Tracker tab active style*/
+#tracker-tab .ui-state-active .ui-icon {
+	background: url(../images/tracker_active.png) no-repeat 4px center; 
+}

@@ -1,0 +1,330 @@
+/*absolutely placed independent elements*/
+#loginFailed{
+	display:none;
+	width:262px;/*304px total*/
+	padding:10px 0px 10px 42px;
+	position: absolute;
+	top: 378px;
+	left: 628px;
+	/*font styles*/
+	font-family:StoneSansBold, Myriad Pro, sans-serif;
+	font-size:11px;
+	z-index:9000;
+}
+.lCenter{margin-top:6px;}
+.lHR1{margin-top:10px;margin-right:10px;}
+.lHR2{margin-left:9px;}
+.arrowImg{position:relative;top:4px;left:4px;}
+.cursor{cursor:pointer;}
+#xBtn{
+	display:none;
+	width:19px;
+	height:19px;
+	position: absolute;
+	top: 384px;
+	left: 638px;
+	background:url('../images/xBtn1.png');
+	display:block;
+	z-index:9001;
+	cursor: pointer;
+}
+#forgot{
+	display:none;
+	position:absolute;
+	top:265px;
+	left:690px;
+	width:415px;
+	height:155px;
+	/*box shadow+blur same as login box*/
+	box-shadow:0px 0px 5px #000000;
+	background:#ECEBE1;
+	z-index:9000;
+}
+#forgotCloseButton{
+	padding: 3px;
+	cursor: pointer;
+}
+#forgot p{
+	margin:0;padding:0;
+}
+.forgotContentL{
+	width:179px;
+	float:left;
+	margin-left:25px;
+	margin-top:8px;
+	padding:0;
+	margin-top:18px;	
+}
+#vr {
+	width: 1px;
+	height: 90px;
+	background-color: #fff;
+	margin-top: 62px;
+	float: left;
+}
+.forgotContentR{
+	width:179px;
+	float:left;
+	margin-top:8px;
+	margin-left:5px;
+	padding:0;
+	margin-top:18px;
+}
+.forgotTop{
+	height:35px;
+	width:100%;
+}
+.forgotBtm{
+	height:82px;
+	margin-top:10px;
+	width:100%;
+}
+.blackReg{
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	font-size:13px;
+}
+.forgotBack{
+	margin-top:10px;
+	display:none;
+}
+.blueBig{
+	font-family:StoneSansSemiBold, Myriad Pro, sans-serif;
+	font-size:18px;
+}
+.forgotBtmFirst{
+	border-right:1px solid #fff;
+}
+#chpwd_user_email{
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	font-size:12px;
+	width:140px;
+	text-align:center;
+	margin-right:-4px;
+}
+#forgot hr.first{
+	margin-top: 10px;
+}
+#forgot hr{
+	width:140px;
+	margin:0;padding:0;
+	height: 0px;
+	max-height: 0px;
+	/*border-bottom: 1px solid #ccc;*/
+	position: relative;
+	right: 5px;
+}
+#forgotLeft{
+	position:relative;left:0;top:0;
+	width:50%;
+	margin:0;padding:0;
+}
+#forgotRight{
+	position:relative;left:188px;top:0;
+	width:50%;
+	margin:0;padding:0;
+}
+.forgotHeader{
+	padding:0;margin:0;
+	display:block;
+	width:172px;
+	height:31px;
+	border:1px solid #D8D6C4;
+	background:#fff;
+}
+.forgotHeaderText{
+	padding:0;margin:0;
+	display:block;
+	width:168px;
+	height:27px;
+	border:1px solid #9B9866;
+	/*font*/
+	font-family:StoneSans, StoneSans, Myriad Pro, sans-serif;
+	font-size:11px;
+	/*to center inner border*/
+	margin-left:1px;
+	margin-top:1px;
+	/*end center inner border*/
+}
+.forgotHeaderTextBig{
+	width:172px;
+}
+.forgotHeaderBig{
+	width:176px;
+}
+/*end absolutely placed independent elements*/
+/*containers*/
+#contentWrapper{
+	float:left;
+	width:100%;
+	height:380px;
+	border-top:1px solid #461613;
+	border-bottom:1px solid #461613;
+	background:url('../images/loginBG.png');
+	background-position:0px -1px;
+}
+/*end containers*/
+/*begin imagearea subdivs*/
+#loginWrapper{
+	position:relative;/*to wrapper div*/
+	/*left:666px;*/
+	left:168px; 
+	top:28px;
+	width:228px;
+	height:309px;
+	background:#FFFFFF;
+	border:1px solid #CCCCCC;
+	box-shadow:0px 0px 5px #CCCCCC;
+}
+#login{
+	width:222px;
+	height:303px;
+	border:1px solid #CCCCCC;
+	position:relative;
+	left:2px;
+	top:2px;
+}
+#login hr{
+	width:200px;
+	position:absolute;
+	top:16px;
+	left:11px;
+	/*html5 boilerplate hr code with our color*/
+	display: block; height: 1px;
+    border: 0; border-top: 1px solid #DBD8D3;
+    margin: 1em 0; padding: 0;
+	/*end boilerplate hr code*/
+}
+#login h2{
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	font-size:15px;
+	color:#999999;
+	margin:0;padding:0;
+	position:absolute;
+	top:10px;
+	left:58px;
+	letter-spacing:.2em;
+	font-weight:300;
+}
+#login label{
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	font-size:14px;
+}
+#login input{
+	width:183px;/*185*/
+	height:17px;/*19*/
+}
+#login p{
+	margin:0;padding:0;
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+}
+#messageP{
+	margin: 0!important;
+	padding: 0!important;
+	position: absolute!important;
+	left: 5px!important;
+	top: 46px!important;
+	font-weight:normal!important;
+}
+#login #p1{
+	position:absolute;
+	top:210px;
+	left:34px;
+	cursor:pointer;
+}
+#login #p2{
+	position:absolute;
+	top:223px;
+	left:72px;
+	cursor:pointer;
+}
+#login #loginBtn{
+	width:130px;
+}
+
+#login #loginBtn.indexPage{
+	position:absolute;
+	top:210px;
+	left:46px;
+}
+
+#loginProcessing.indexPage {
+	position:absolute;
+	top:205px;
+	left:185px;
+	display:none;
+}
+
+#login #loginBtn.loginPage{
+	position:absolute;
+	top:260px;
+	left:46px;
+}
+
+#loginProcessing.loginPage{
+	position:absolute;
+	top:255px;
+	left:185px;
+	display:none;
+}
+
+#lblEmail{
+	position: absolute;
+	top: 105px;
+	left: 69px;
+}
+#email{
+	position: absolute;
+	top: 125px;
+	left: 18px;
+}
+#lblPW{
+	position: absolute;
+	top:155px;
+	left:83px;
+}
+#password{
+	position:absolute;
+	top:174px;
+	left:18px;
+}
+.blueButton {
+	background-color: #244b74;
+	color: #FFFFFF;
+	border: 2px solid #fff;
+	outline: 1px solid #244b74;
+	font-family: StoneSansBold;
+	font-size: 11px;
+	padding: 3px 12px 3px 12px;
+	cursor: pointer;
+}
+#forgotCloseButton{
+	float: right;
+}
+#bottomTextWrapper{
+	position:relative;/*to wrapper div*/
+	left: 764px;
+   	top: -30px;
+	font-family:Calibri, sans-serif;
+	font-style:italic;
+	color:#EBE9E3;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px #000;
+}
+.pointer{
+	cursor: pointer;
+}
+#forgot-password-form{
+	margin-top:10px;
+	margin-bottom:-1px;
+	margin-left:4px;
+}
+
+.emailTextWrapper{
+	display: inline;
+	padding-top: 1px;
+	padding-bottom: 3px;	
+	width: 140px;	
+}
+/*end imagearea subdivs*/

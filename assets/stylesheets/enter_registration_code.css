@@ -1,0 +1,65 @@
+#wrapper_regcode{
+	width:1024px;
+	height:380px;
+	background:url('../images/loginBG.png');
+}
+#regCodeWrapper{
+	position:relative;/*to wrapper div*/
+	left:120px; top:97px;
+	width:328px;
+	height:184px;
+	background:#FFFFFF;
+	border:1px solid #CCCCCC;
+	box-shadow:0px 0px 5px #CCCCCC;
+}
+#regCode{
+	width:322px;
+	height:178px;
+	background:#FFFFFF;
+	border:1px solid #CCCCCC;
+	margin-left:2px;
+	margin-top:2px;
+}
+#regCode h2{
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	font-size:15px;
+	font-weight:normal;
+	color:#999999;
+	letter-spacing:.2em;
+}
+#regCode hr{
+	width:302px;
+	margin:0;padding:0;
+	height: 0px;
+	max-height: 0px;
+	margin-left:8px;
+	/*html5 boilerplate hr code with our color*/
+	display: block; height: 1px;
+    border: 0; border-top: 1px solid #ccc;
+    margin: 1em 0; padding: 0;
+	/*end boilerplate hr code*/
+}
+#regCode p{
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	text-shadow: 0px 0px 1px #B48161;
+}
+#regCode #regCodeText{
+	border: 1px solid #999;
+	border-radius: 5px;
+	width: 185px;
+}
+#regCode #regCodeSubmit{
+	width:93px;
+}
+#bottomTextWrapper{
+	position:relative;/*to wrapper div*/
+	left: 595px;
+	top: 74px;
+	font-family:Calibri;
+	font-style:italic;
+	color:#EBE9E3;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px #000;
+}

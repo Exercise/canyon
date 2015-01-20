@@ -1,0 +1,163 @@
+/* begin containers: */
+body{
+	background:#fff;
+	height:768px;
+}
+#wrapper{
+	width:1024px;
+	height:768px;
+	margin:0 auto;
+	/*border:1px solid black;*/
+}
+#content{
+	width:1024px;
+	padding-bottom:10px;
+/* 	height:547px; */
+	float:left;
+}
+.error{
+	background:#FEE7DD;
+}
+#top{
+	float:left;
+	width:100%;
+	height:130px;
+}
+#footerWrapper{
+	float:left;
+	width:1024px;
+	height:84px;
+	background:#fff;/*old: #EEEAE8;*/
+	border:0;/*reset*/
+	border-top:1px solid #C9B198;
+	/*border:1px solid red;*/
+}
+#prefooter{
+	height:162px;
+	float:left;
+	width:1024px;
+}
+#prefooter_spacer{
+	height:2px;
+	border-top:1px solid #E4D7CB;
+	width:1024px;
+	float:left;
+}
+/*end containers, begin top subdivs*/
+#logo{
+	float:left;
+	background-image:url('../images/logo.png');/*url('../images/logo.png');*/  
+    background-repeat:no-repeat;  
+	width:256px;
+	height:66px;
+	margin-top:32px;
+	margin-left:55px;
+	cursor:pointer;
+}
+.spacer_top{
+	float:left;
+	width:100%;
+	height:2px;
+	border-top:1px solid #CEC1BB;
+}
+.spacer_bottom{
+	float:left;
+	width:100%;
+	height:2px;
+	border-bottom:1px solid #CEC1BB;
+}
+/*end top*/
+/*begin footer*/
+#footerWrapper ul{
+	list-style-type:none;
+	padding:0;margin:0;
+	margin-left:55px;
+	height:100%;
+	width:485px;max-width:485px;
+	float:left;
+}
+#footerWrapper li{
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	font-size:12px;
+	/*letter-spacing:1px*/
+	margin:0;padding:0;
+	margin-top:35px;margin-left:15px;
+	font-weight:normal;
+	display:inline-block;
+}
+#footerWrapper li a{
+	text-decoration:none;
+}
+#footerWrapper li.first{
+	margin-left:0px;
+}
+#footerWrapper img{float:right;cursor:pointer;border:none;}
+#hf_img{margin-right:55px;margin-top:28px;}
+#id_verisignSpan img, #norton_img{margin-right:60px;margin-top:13px;}
+/*end footer*/
+/*button styles*/
+div.blueBtnWrapper{ border:1px solid #003366; height:26px; /*todo:width has to auto-wrap size of blueBtn (depends on text length inside button) */ }
+input.blueBtn { border:1px solid #fff; color:#fff; background:#003366; font-family:StoneSansBold; font-weight:normal; font-size:11px; height:22px;margin-top:2px; }
+/*end button styles*/
+.fpLightboxIframe {
+    overflow:hidden!important;
+    min-height:580px;
+    position: relative;
+	bottom: 20px;
+}
+
+#user-login.password-reset { font-family:StoneSans, Myriad Pro, sans-serif; padding-top:15px; }
+
+.bluebtn { font-size:12px; border:double;  display:inline-block; cursor:pointer; text-align:center; }
+.bluebtn span { font-family:StoneSans, Myriad Pro, sans-serif; text-transform:uppercase; font-weight:bold; display:block; padding-left:5px; padding-right:5px; line-height:20px; }
+
+div.container.password-reset { width:50%; margin:0 auto; }
+#password-reset-form { background-color:#f0f0f0; padding: 10px;}
+#errorDiv{
+	/* width:350px; */
+	padding-left:40px;
+	height:22px;/*32px total*/
+	padding-top:10px;
+	background:#F76929;
+	visibility:hidden;
+	/*font styles*/
+	font-family:StoneSansBold, Myriad Pro, sans-serif;
+	font-size:11px;
+	color:#fff;
+	/* float: right; */
+	margin: 0 auto;
+	/* margin-right: 20px; */
+	top: -65px;
+}
+#errorDiv.step1{
+	width:310px;
+	position:relative;
+	bottom:42px;
+	left: -14px;
+}
+
+#errorDiv.password-reset {
+	width: 375px;
+	position: relative;
+	left: -25px;
+	top: 10px;
+}
+
+#errorDiv span{
+	position: relative;
+	right: 25px;
+	bottom: 9px;
+}
+#xBtn{
+	width:19px;
+	height:19px;
+	background:url('../images/xBtn1.png');
+	display:inline-block;
+	position: relative;
+	right: 28px;
+	bottom: 3px;
+}
+#errorMsg {
+	text-transform: uppercase;
+}
+table#forgot-table td input { width:100%; } /* Fix for CFE-357 */

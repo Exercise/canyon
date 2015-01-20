@@ -1,0 +1,9 @@
+div.anXBtn
+{
+	background:url('../images/xBtn3.png');
+	width:16px;height:16px;
+	position:absolute;top:5px;right:10px;
+}
+body{
+	margin:0 auto;background:transparent;
+}

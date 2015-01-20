@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome & featured videos!</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fancybox.cr.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/activity_center.css"/>
+	
+	<script type="text/javascript" src="javascripts/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="javascripts/jquery.migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="javascripts/jquery.fancybox.cr.js"></script>
+	<script type="text/javascript" src="javascripts/theplatform.js"></script>
+	
+	<!--script type="text/javascript" src="javascripts/hf.globals.js"></script>
+	<script type="text/javascript" src="javascripts/healthfleet_api.js"></script-->
+</head>
+<body>
+	<div class="left_feature second">
+		<h2 class="CRTalksNew">Canyon Ranch Videos<!--Featured Video--></h2>
+		<div class="left_feature_inner">
+			<div class="img_more">
+				<div class="imgWrapper">
+					<div class="imgWrapperInner">
+						<a id="play-featured" href="#featured-video" class="featured-video-lightbox">
+							<img id="featured-image-thumb" class="main"/>
+						</a>
+					</div>
+				</div>
+				<!-- featured video lightbox -->
+				<div id="featured-video">
+					<div id="featured-video-inner-wrapper">
+						<div id="lightbox-featured-title" class="lightbox-meta redHeader">
+							<span class="featured-title"></span>
+						</div>
+						<div id="player-div">
+							<iframe id="player" src="" width="541px" height="305px" frameborder="1px" allowfullscreen="true" webkitallowfullscreen="true" style="overflow:hidden;"></iframe>
+						</div>
+						<div id="lightbox-featured-description" class="lightbox-meta contentBtm">
+							<span class="featured-description"></span><br/>
+						<!-- 
+							<a href="/dev/videolibrary">
+								<img class="bigBtnFeature" src="@routes.Assets.at("images/more_expert_videos.png")" />
+							</a>
+						-->
+						</div>
+					</div>
+				</div>
+				<!-- end featured video lightbox -->
+				<div class="bottom_right bottom_right2">
+					<span class="left">
+					<!-- 
+						<a href="/dev/videolibrary">
+							<img class="bigBtnFeature" src="@routes.Assets.at("images/more_expert_videos.png")" />
+						</a>
+					-->
+					</span>
+					<span class="right">
+						
+					</span>
+				</div>
+			</div>
+			<div class="right">
+				<div class="top_right appt2">
+					<p class="redHeader">
+						<a id="play-featured-title" href="#featured-video" class="featured-video-lightbox"><span class="featured-title"></span></a>
+					</p>
+<!--
+					<p class="blueHeader15">
+						<span class="featured-presenter"></span>
+					</p>
+-->								
+					<p class="content contentBtm">
+						<span class="featured-brief-description"></span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="right_feature" style="visibility:hidden;">
+		<a id="play-welcome" href="#featured-video" class="lightbox featured-video-lightbox">
+			<img id="welcome-thumb" src="assets/images/AC-WelcomeVideoThumb.png" />
+		</a>
+	</div>
+	
+	<script>
+		function getQueryParams()
+		{
+			var qs = location.search.substring(1, location.search.length);
+
+			qs = qs.replace(/\+/g, ' ');
+			var args = qs.split('&'); // parse out name/value pairs separated via &
+			var params = {};
+			
+			// split out each name=value pair
+			for (var i = 0; i < args.length; i++) 
+			{
+				var pair = args[i].split('=');
+				var name = decodeURIComponent(pair[0]);           
+				var value = ((pair.length == 2) ? decodeURIComponent(pair[1]) : name);           
+				params[name] = value;
+			}
+
+			return params;
+		}
+
+		function getQueryParam(key)
+		{
+			var qp = getQueryParams();
+			return qp[key];
+		}
+		
+		var showWelcomeVideo = (parseInt(getQueryParam("playWelcome")) === 1);
+		
+		var urlToPlay;
+		var useThisPlaylistID = 0;
+		var useThisClipID = 0;
+		//var hfprogram = HF.getHealthProgram();
+		var hfprogram = {"successPlan":{"attributes":{"type":"Success_Plan__c","url":"/services/data/v25.0/sobjects/Success_Plan__c/a14f0000001SAtaAAG"},"Name":"Unassigned","Id":"a14f0000001SAtaAAG"},"programSessions":[{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UawkAAC"},"Name":"Program Session","Session_Number__c":1,"Scheduling_Selection__c":"Month 1","Duration__c":"60 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UawkAAC","Qualification__c":"a0pi0000001DrtxAAC","Session_Length__c":"45 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UawuAAC"},"Name":"Program Session","Session_Number__c":2,"Scheduling_Selection__c":"Month 1","Duration__c":"60 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UawuAAC","Qualification__c":"a0pf0000000hUcWAAU","Session_Length__c":"45 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UawzAAC"},"Name":"Program Session","Session_Number__c":3,"Scheduling_Selection__c":"Month 1","Duration__c":"60 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UawzAAC","Qualification__c":"a0pf0000000hUcRAAU","Session_Length__c":"45 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000Uax4AAC"},"Name":"Program Session","Session_Number__c":4,"Scheduling_Selection__c":"Month 1","Duration__c":"60 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000Uax4AAC","Qualification__c":"a0pf0000000oxMJAAY","Session_Length__c":"45 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000Uax9AAC"},"Name":"Program Session","Session_Number__c":5,"Scheduling_Selection__c":"Month 2","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000Uax9AAC","Qualification__c":"a0pf0000000hUcWAAU","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UaxJAAS"},"Name":"Program Session","Session_Number__c":6,"Scheduling_Selection__c":"Month 2","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UaxJAAS","Qualification__c":"a0pf0000000hUcRAAU","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UaxOAAS"},"Name":"Program Session","Session_Number__c":7,"Scheduling_Selection__c":"Month 2","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UaxOAAS","Qualification__c":"a0pf0000000oxMJAAY","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UaxYAAS"},"Name":"Program Session","Session_Number__c":8,"Scheduling_Selection__c":"Month 3","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UaxYAAS","Qualification__c":"a0pf0000000hUcWAAU","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UaxdAAC"},"Name":"Program Session","Session_Number__c":9,"Scheduling_Selection__c":"Month 3","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UaxdAAC","Qualification__c":"a0pf0000000hUcRAAU","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UaxiAAC"},"Name":"Program Session","Session_Number__c":10,"Scheduling_Selection__c":"Month 3","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UaxiAAC","Qualification__c":"a0pf0000000oxMJAAY","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UaxnAAC"},"Name":"Program Session","Session_Number__c":11,"Scheduling_Selection__c":"Month 4","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UaxnAAC","Qualification__c":"a0pf0000000hUcWAAU","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UaxsAAC"},"Name":"Program Session","Session_Number__c":12,"Scheduling_Selection__c":"Month 4","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UaxsAAC","Qualification__c":"a0pf0000000hUcRAAU","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UaxxAAC"},"Name":"Program Session","Session_Number__c":13,"Scheduling_Selection__c":"Month 4","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UaxxAAC","Qualification__c":"a0pf0000000oxMJAAY","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000Uay2AAC"},"Name":"Program Session","Session_Number__c":14,"Scheduling_Selection__c":"Month 5","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000Uay2AAC","Qualification__c":"a0pf0000000hUcWAAU","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000Uay7AAC"},"Name":"Program Session","Session_Number__c":15,"Scheduling_Selection__c":"Month 5","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000Uay7AAC","Qualification__c":"a0pf0000000hUcRAAU","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UayCAAS"},"Name":"Program Session","Session_Number__c":16,"Scheduling_Selection__c":"Month 5","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UayCAAS","Qualification__c":"a0pf0000000oxMJAAY","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UayHAAS"},"Name":"Program Session","Session_Number__c":17,"Scheduling_Selection__c":"Month 6","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UayHAAS","Qualification__c":"a0pf0000000hUcWAAU","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UayMAAS"},"Name":"Program Session","Session_Number__c":18,"Scheduling_Selection__c":"Month 6","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UayMAAS","Qualification__c":"a0pf0000000hUcRAAU","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UayRAAS"},"Name":"Program Session","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UayRAAS","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UayWAAS"},"Name":"Program Session","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UayWAAS","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UaybAAC"},"Name":"Program Session","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UaybAAC","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UaygAAC"},"Name":"Program Session","Session_Number__c":19,"Scheduling_Selection__c":"Month 6","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UaygAAC","Qualification__c":"a0pf0000000oxMJAAY","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UaylAAC"},"Name":"Program Session","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UaylAAC","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UayqAAC"},"Name":"Program Session","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UayqAAC","Session_Length__c":"20 Minutes"},{"attributes":{"type":"Program_Session__c","url":"/services/data/v25.0/sobjects/Program_Session__c/a0of0000000UayvAAC"},"Name":"Program Session","Duration__c":"30 Minutes","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0of0000000UayvAAC","Session_Length__c":"20 Minutes"}],"programImages":{},"programAttachments":{"Nutrition":[{"title":"Aiming for Your Healthy Weight","subject":null,"recordId":"a1Pf0000000qscLEAQ","pgmAttachmentType":"Nutrition","parentRecordLink":"<a href=\"/a0Tf0000000iVDkEAM\" target=\"_self\">a0Tf0000000iVDkEAM</a>","parentObj":"Master_Health_Program__c","parentId":"a0Tf0000000iVDkEAM","lastModifiedDate":"2014-07-24T18:02:05.000Z","keywords":null,"isDeletedFromS3":false,"imageKey":null,"filesize":63601,"fileName":"canyonranch.com-Aiming_for_Your_Healthy_Weight_1377546707317_1406224924.pdf","description":null,"createdDate":"2014-07-24T18:02:05.000Z","contentType":"application/pdf","cloudFileURL":"https://s3.amazonaws.com/sfdc.docs.payodacretest.healthfleetfull.com/canyonranch.com-Aiming_for_Your_Healthy_Weight_1377546707317_1406224924.pdf","cloudDomainId":"a1Of0000005Z44lEAC","caseSafeParentId":"a0Tf0000000iVDkEAM","author":"Payoda CRE Test"},{"title":"Strategies for Weight Loss That Sticks","subject":null,"recordId":"a1Pf0000000qsc1EAA","pgmAttachmentType":"Nutrition","parentRecordLink":"<a href=\"/a0Tf0000000iVDkEAM\" target=\"_self\">a0Tf0000000iVDkEAM</a>","parentObj":"Master_Health_Program__c","parentId":"a0Tf0000000iVDkEAM","lastModifiedDate":"2014-07-24T18:00:04.000Z","keywords":null,"isDeletedFromS3":false,"imageKey":null,"filesize":57664,"fileName":"canyonranch.com-Strategies_for_Weight_Loss_That_Sticks_1377546754231_1406224803.pdf","description":null,"createdDate":"2014-07-24T18:00:04.000Z","contentType":"application/pdf","cloudFileURL":"https://s3.amazonaws.com/sfdc.docs.payodacretest.healthfleetfull.com/canyonranch.com-Strategies_for_Weight_Loss_That_Sticks_1377546754231_1406224803.pdf","cloudDomainId":"a1Of0000005Z44lEAC","caseSafeParentId":"a0Tf0000000iVDkEAM","author":"Payoda CRE Test"},{"title":"Love Yourself While You Lose Weight","subject":null,"recordId":"a1Pf0000000qsc6EAA","pgmAttachmentType":"Nutrition","parentRecordLink":"<a href=\"/a0Tf0000000iVDkEAM\" target=\"_self\">a0Tf0000000iVDkEAM</a>","parentObj":"Master_Health_Program__c","parentId":"a0Tf0000000iVDkEAM","lastModifiedDate":"2014-07-24T18:01:03.000Z","keywords":null,"isDeletedFromS3":false,"imageKey":null,"filesize":69203,"fileName":"canyonranch.com-Love_Yourself_While_You_Lose_Weight_1377546659791_1406224863.pdf","description":null,"createdDate":"2014-07-24T18:01:03.000Z","contentType":"application/pdf","cloudFileURL":"https://s3.amazonaws.com/sfdc.docs.payodacretest.healthfleetfull.com/canyonranch.com-Love_Yourself_While_You_Lose_Weight_1377546659791_1406224863.pdf","cloudDomainId":"a1Of0000005Z44lEAC","caseSafeParentId":"a0Tf0000000iVDkEAM","author":"Payoda CRE Test"}],"Life Management":[{"title":"The Healing Power of Nature","subject":null,"recordId":"a1Pf0000000qsdsEAA","pgmAttachmentType":"Life Management","parentRecordLink":"<a href=\"/a0Tf0000000iVDkEAM\" target=\"_self\">a0Tf0000000iVDkEAM</a>","parentObj":"Master_Health_Program__c","parentId":"a0Tf0000000iVDkEAM","lastModifiedDate":"2014-07-24T18:09:42.000Z","keywords":null,"isDeletedFromS3":false,"imageKey":null,"filesize":98640,"fileName":"The_Healing_Power_of_Nature_1406225382.pdf","description":null,"createdDate":"2014-07-24T18:09:42.000Z","contentType":"application/pdf","cloudFileURL":"https://s3.amazonaws.com/sfdc.docs.payodacretest.healthfleetfull.com/The_Healing_Power_of_Nature_1406225382.pdf","cloudDomainId":"a1Of0000005Z44lEAC","caseSafeParentId":"a0Tf0000000iVDkEAM","author":"Payoda CRE Test"},{"title":"Practicing Everyday Mindfulness","subject":null,"recordId":"a1Pf0000000qsdJEAQ","pgmAttachmentType":"Life Management","parentRecordLink":"<a href=\"/a0Tf0000000iVDkEAM\" target=\"_self\">a0Tf0000000iVDkEAM</a>","parentObj":"Master_Health_Program__c","parentId":"a0Tf0000000iVDkEAM","lastModifiedDate":"2014-07-24T18:07:06.000Z","keywords":null,"isDeletedFromS3":false,"imageKey":null,"filesize":88691,"fileName":"Practicing_Everyday_Mindfulness_1406225226.pdf","description":null,"createdDate":"2014-07-24T18:07:06.000Z","contentType":"application/pdf","cloudFileURL":"https://s3.amazonaws.com/sfdc.docs.payodacretest.healthfleetfull.com/Practicing_Everyday_Mindfulness_1406225226.pdf","cloudDomainId":"a1Of0000005Z44lEAC","caseSafeParentId":"a0Tf0000000iVDkEAM","author":"Payoda CRE Test"},{"title":"Nurturing Your Self-Esteem","subject":null,"recordId":"a1Pf0000000qsdTEAQ","pgmAttachmentType":"Life Management","parentRecordLink":"<a href=\"/a0Tf0000000iVDkEAM\" target=\"_self\">a0Tf0000000iVDkEAM</a>","parentObj":"Master_Health_Program__c","parentId":"a0Tf0000000iVDkEAM","lastModifiedDate":"2014-07-24T18:08:12.000Z","keywords":null,"isDeletedFromS3":false,"imageKey":null,"filesize":92108,"fileName":"Nurturing_Your_Self-Esteem_1406225291.pdf","description":null,"createdDate":"2014-07-24T18:08:12.000Z","contentType":"application/pdf","cloudFileURL":"https://s3.amazonaws.com/sfdc.docs.payodacretest.healthfleetfull.com/Nurturing_Your_Self-Esteem_1406225291.pdf","cloudDomainId":"a1Of0000005Z44lEAC","caseSafeParentId":"a0Tf0000000iVDkEAM","author":"Payoda CRE Test"}],"Fitness":[{"title":"Aerobic Exercise For Mind and Body","subject":null,"recordId":"a1Pf0000000qscuEAA","pgmAttachmentType":"Fitness","parentRecordLink":"<a href=\"/a0Tf0000000iVDkEAM\" target=\"_self\">a0Tf0000000iVDkEAM</a>","parentObj":"Master_Health_Program__c","parentId":"a0Tf0000000iVDkEAM","lastModifiedDate":"2014-07-24T18:04:55.000Z","keywords":null,"isDeletedFromS3":false,"imageKey":null,"filesize":67515,"fileName":"canyonranch.com-Aerobic_Exercise_For_Mind_and_Body_1377546549177_1406225095.pdf","description":null,"createdDate":"2014-07-24T18:04:55.000Z","contentType":"application/pdf","cloudFileURL":"https://s3.amazonaws.com/sfdc.docs.payodacretest.healthfleetfull.com/canyonranch.com-Aerobic_Exercise_For_Mind_and_Body_1377546549177_1406225095.pdf","cloudDomainId":"a1Of0000005Z44lEAC","caseSafeParentId":"a0Tf0000000iVDkEAM","author":"Payoda CRE Test"},{"title":"What's Your Exercise Personality?","subject":null,"recordId":"a1Pf0000000qsd4EAA","pgmAttachmentType":"Fitness","parentRecordLink":"<a href=\"/a0Tf0000000iVDkEAM\" target=\"_self\">a0Tf0000000iVDkEAM</a>","parentObj":"Master_Health_Program__c","parentId":"a0Tf0000000iVDkEAM","lastModifiedDate":"2014-07-24T18:06:04.000Z","keywords":null,"isDeletedFromS3":false,"imageKey":null,"filesize":78875,"fileName":"canyonranch.com-Whats_Your_Exercise_Personality_1377540261633_1406225163.pdf","description":null,"createdDate":"2014-07-24T18:06:04.000Z","contentType":"application/pdf","cloudFileURL":"https://s3.amazonaws.com/sfdc.docs.payodacretest.healthfleetfull.com/canyonranch.com-Whats_Your_Exercise_Personality_1377540261633_1406225163.pdf","cloudDomainId":"a1Of0000005Z44lEAC","caseSafeParentId":"a0Tf0000000iVDkEAM","author":"Payoda CRE Test"},{"title":"15 Tips for Exercising More","subject":null,"recordId":"a1Pf0000000qscfEAA","pgmAttachmentType":"Fitness","parentRecordLink":"<a href=\"/a0Tf0000000iVDkEAM\" target=\"_self\">a0Tf0000000iVDkEAM</a>","parentObj":"Master_Health_Program__c","parentId":"a0Tf0000000iVDkEAM","lastModifiedDate":"2014-07-24T18:03:40.000Z","keywords":null,"isDeletedFromS3":false,"imageKey":null,"filesize":67238,"fileName":"canyonranch.com-15_Tips_for_Exercising_More_1377546605546_1406225019.pdf","description":null,"createdDate":"2014-07-24T18:03:40.000Z","contentType":"application/pdf","cloudFileURL":"https://s3.amazonaws.com/sfdc.docs.payodacretest.healthfleetfull.com/canyonranch.com-15_Tips_for_Exercising_More_1377546605546_1406225019.pdf","cloudDomainId":"a1Of0000005Z44lEAC","caseSafeParentId":"a0Tf0000000iVDkEAM","author":"Payoda CRE Test"}]},"planAttachments":{},"nutritionPlan":{"attributes":{"type":"Nutrition_Plan__c","url":"/services/data/v25.0/sobjects/Nutrition_Plan__c/a0Zf00000045QA0EAM"},"Name":"Unassigned","Id":"a0Zf00000045QA0EAM"},"healthProgram":{"attributes":{"type":"Health_Program__c","url":"/services/data/v25.0/sobjects/Health_Program__c/a0Mf0000003hs1gEAA"},"Account__c":"001f000000gQSQgAAO","Frequency_CardioChek_Value__c":0,"End_Date__c":"2015-01-24","Frequency_Sleep_Value__c":0,"Master_Health_Program__r":{"attributes":{"type":"Master_Health_Program__c","url":"/services/data/v25.0/sobjects/Master_Health_Program__c/a0Tf0000000iVDkEAM"},"Name":"Canyon Ranch @Home: Weight Loss program","Term__c":"6 Month","Program_Description__c":"<p>\r\n\tProgram for QA purposes</p>","Term_Months__c":6,"Program_Special_Notes__c":"<p>\r\n\tProgram for QA purposes</p>","Program_Publisher_Name__c":"Payoda CRE Test","Organization__c":"a07f00000034jBMAAY","Id":"a0Tf0000000iVDkEAM","Program_Video_Feed__c":"//feed.theplatform.com/f/esZ9MC/PDHOu2D4N0B3","Price__c":1740.0},"Approved__c":true,"Frequency_Cholesterol_Value__c":0,"Frequency_Exercise_Value__c":0,"Name":"Canyon Ranch @Home: Weight Loss program","Frequency_Body_Composition_Value__c":0,"Frequency_Weight_Value__c":0,"Frequency_Calories_Value__c":0,"Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0Mf0000003hs1gEAA","Start_Date__c":"2014-07-25","Frequency_Glucose_Value__c":0,"Status__c":"In Progress","Frequency_Blood_Pressure_Value__c":0},"fitnessPlan":{"attributes":{"type":"Fitness_Plan__c","url":"/services/data/v25.0/sobjects/Fitness_Plan__c/a0If00000024VbpEAE"},"Name":"Unassigned","Id":"a0If00000024VbpEAE"}}
+		
+		var healthCube = {"programImages":{},"healthCube":{"attributes":{"type":"Health_Cube__c","url":"/services/data/v25.0/sobjects/Health_Cube__c/a0Lf0000002AKtoEAG"},"OC_Force_Sequence__c":true,"Onboarding_Completed_Video_Feed__c":"//feed.theplatform.com/f/esZ9MC/KMlqA1H_AyXb","Maximum_Discount__c":0.01,"Program_Publisher_Name__c":"Payoda CRE Test","Master_Health_Program__r":{"attributes":{"type":"Master_Health_Program__c","url":"/services/data/v25.0/sobjects/Master_Health_Program__c/a0Tf0000000iVDkEAM"},"Name":"Canyon Ranch @Home: Weight Loss program","Term__c":"6 Month","Program_Description__c":"<p>\r\n\tProgram for QA purposes</p>","Publisher_Name__c":"Payoda CRE Test","Term_Months__c":6,"Program_Special_Notes__c":"<p>\r\n\tProgram for QA purposes</p>","Master_Assessment_Questionnaire__c":"a0Of0000000fn62EAA","Id":"a0Tf0000000iVDkEAM","Price__c":1740.0,"Total_Program_Session__c":"19"},"Frequency_Cholesterol_Value__c":0,"Program_Name__c":"Payoda CRE Test","Name":"Payoda CRE Test HC","OC_Auto_Completion__c":false,"Frequency_Body_Composition_Value__c":0,"Membership_Term__c":"6 Months","Frequency_Weight_Value__c":0,"Product_Category__c":"Advanced","Membership_Term_Months__c":6,"Onboarding_Video_Feed__c":"Not being used","Master_Health_Program__c":"a0Tf0000000iVDkEAM","Id":"a0Lf0000002AKtoEAG","Price__c":0.0,"Frequency_Glucose_Value__c":0,"OC_Configuration_Steps__c":"Registered,Activated,Questionnaire Completed,Initial Session Scheduled,Initial Session Completed,On Boarding Completed","Frequency_Blood_Pressure_Value__c":0}};
+		
+		var featuredPlaylistID = 0;
+		var welcomePlaylistID = 0;
+		var isVideoCancelled = false;
+		
+		$(document).ready(function(){
+			
+			$('.featured-video-lightbox').fancybox({
+				'beforeLoad' : function()
+				{
+					isVideoCancelled = false;
+				},
+				'afterLoad' : function() {
+ 						if(useThisPlaylistID === welcomePlaylistID) $('#featured-video').addClass('welcome-video');
+ 						else $('#featured-video').removeClass('welcome-video');
+ 						$("#player").one("load", function() {
+ 							TP.playClipFromPlaylist(useThisPlaylistID, useThisClipID);
+
+ 							TP.bindEvent("OnMediaStart", function() {
+								if (isVideoCancelled)
+								{
+									TP.pause(true);
+									return;
+								}
+
+ 								var videoType = (useThisPlaylistID === welcomePlaylistID) ? "Welcome Video" : "CR Talks Video";
+ 								ga('send', 'event', videoType, 'Play', TP.getTitleForClipFromPlaylist(useThisPlaylistID, useThisClipID));
+ 							});
+ 							TP.bindEvent("OnMediaPause", function() {
+ 								var videoType = (useThisPlaylistID === welcomePlaylistID) ? "Welcome Video" : "CR Talks Video";
+ 								ga('send', 'event', videoType, 'Pause', TP.getTitleForClipFromPlaylist(useThisPlaylistID, useThisClipID));
+ 							});
+ 							TP.bindEvent("OnMediaUnpause", function() {
+ 								var videoType = (useThisPlaylistID === welcomePlaylistID) ? "Welcome Video" : "CR Talks Video";
+ 								ga('send', 'event', videoType, 'Unpause', TP.getTitleForClipFromPlaylist(useThisPlaylistID, useThisClipID));
+ 							});
+ 							TP.bindEvent("OnMediaComplete", function() {
+ 								var videoType = (useThisPlaylistID === welcomePlaylistID) ? "Welcome Video" : "CR Talks Video";
+ 								ga('send', 'event', videoType, 'Stop', TP.getTitleForClipFromPlaylist(useThisPlaylistID, useThisClipID));
+ 							});
+ 							
+ 						}); 
+				},
+				'beforeClose' : function(){
+					isVideoCancelled = true;
+					TP.pause(true);
+					var videoType = (useThisPlaylistID === welcomePlaylistID) ? "Welcome Video" : "CR Talks Video";
+					ga('send', 'event', videoType, 'Close', TP.getTitleForClipFromPlaylist(useThisPlaylistID, useThisClipID));
+				}
+			});
+			
+			$('#play-featured, #play-featured-title').click(function() {
+				useThisPlaylistID = featuredPlaylistID;
+				useThisClipID = 0;
+
+				$('.lightbox-meta').show();
+			});
+			
+			TP.initialize("#player", "//player.theplatform.com/p/esZ9MC/vd_tTI5tzTdO?autoPlay=true", function() {
+				
+				TP.loadPlaylist(/*HF.getHealthCube().*/healthCube.healthCube.Onboarding_Completed_Video_Feed__c, function(playlistID) {
+					
+					welcomePlaylistID = playlistID;
+					
+					TP.loadPlaylist(hfprogram.healthProgram.Master_Health_Program__r.Program_Video_Feed__c, function(playlistID) {
+						
+						featuredPlaylistID = playlistID;
+						
+						$('#featured-image-thumb').attr('src', TP.getThumbnailForClipFromPlaylist(featuredPlaylistID, 0));
+						$('span.featured-title').html(TP.getTitleForClipFromPlaylist(featuredPlaylistID, 0));
+						
+						var info = $.parseJSON(TP.getDescriptionForClipFromPlaylist(featuredPlaylistID, 0));
+						if(info) {
+							//$('span.featured-presenter').html(info.presenter);
+							$('span.featured-description').html(info.description);
+							$('span.featured-brief-description').html(info.brief_description);
+						}
+					});
+				});
+			});
+			
+			if (showWelcomeVideo)
+			{
+				$(".left_feature").hide();
+				$(".right_feature").css("visibility", "visible");
+							
+				$('#play-welcome').click(function() {
+					useThisPlaylistID = welcomePlaylistID;
+					useThisClipID = 0;
+					$('.lightbox-meta').hide();
+				});
+				
+				$(window).load(function() {
+					setTimeout(function(){$('#play-welcome').trigger("click");}, 2500);
+				});
+			}
+		});
+		
+		function ga()
+		{}
+	</script>
+</body>
