@@ -117,13 +117,10 @@ body.sales > header,
 body.text > header {
     display: table;
     width: 100%;
-    height: 100%;
+    height: 80%;
     background: url(../images/sales/bg-header.jpg) no-repeat center top;
     background-size: 100% 100%;
     color: #fff;
-}
-body.text > header {
-    height: 80%;
 }
 body.sales > header a,
 body.text > header a {
@@ -134,7 +131,7 @@ body.text > header .logo {
     text-align: left;
     height: 1px;
     vertical-align: top;
-    padding: 2.4em 0;
+    padding: 2.4em 0 1em 0;
 }
 body.sales > header .logo > *,
 body.text > header .logo > * {
@@ -161,7 +158,7 @@ body.text > header .user {
     text-align: right;
     height: 1px;
     vertical-align: middle;
-    padding: 2.4em 0;
+    padding: 2.4em 0 1em 0;
 }
 body.sales > header .user ul.menu li,
 body.text > header .user ul.menu li {
@@ -181,19 +178,12 @@ body.sales > header .user ul.menu li a:hover,
 body.text > header .user ul.menu li a:hover {
     border-bottom-color: rgba(255,255,255,0);
 }
-body.text > header .logo,
-body.text > header .user {
-    padding-bottom: 1em;
-}
 body.sales > header .banner,
 body.text > header .banner {
     text-align: left;
     height: auto;
     vertical-align: bottom;
-    padding: 2.3em 2.3em 0 0;
-}
-body.text > header .banner {
-    padding-top: 1em;
+    padding: 1em 2.3em 0 0;
 }
 body.sales > header .banner img,
 body.text > header .banner img {
@@ -206,19 +196,13 @@ body.text > header .content {
     text-align: left;
     height: auto;
     vertical-align: middle;
-    padding: 2.3em;
-}
-body.text > header .content {
     padding: 1em 2.3em;
 }
 body.sales > header .content article,
 body.text > header .content article {
     width: 65.8em;
     letter-spacing: 0.05em;
-    margin: 0 0 6.6em 0;
-}
-body.text > header .content article {
-    margin-bottom: 3em;
+    margin: 0 0 3em 0;
 }
 body.sales > header .content article > *,
 body.text > header .content article > * {
@@ -263,10 +247,7 @@ body.text > #layout {
     background: #fff;
 }
 body.sales main > header,
-body.sales section.main > header {
-    text-align: center;
-    padding: 10em 0;
-}
+body.sales section.main > header,
 body.text main > header {
     text-align: center;
     padding: 5em 0;
