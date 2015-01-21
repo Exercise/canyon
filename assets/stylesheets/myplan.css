@@ -1,0 +1,119 @@
+#myplan_wrapper { 
+	/*tab_content in AC page*/
+	/*546X407*/
+	width: 500px;
+	min-height: 409px;
+	/*padding: 15px;*/
+	margin: 0 auto;
+	background:#ECEBE1;
+	overflow:hidden;
+}
+span.myplan_new{
+	color: #fc704a;
+	font-size: 30px;
+	font-family: StoneSansSemiBold, Myriad Pro, sans-serif;
+	display: inline;
+	border: none;
+	line-height: 10px;
+	font-weight: normal;
+	position: relative;
+	right: 30px;
+	bottom: 31px;
+}
+.myPlanWrapper {
+	width:498px;
+	height:125px;
+	border:1px solid #B4A49C;
+	float:left;
+	margin-left:0px;
+	background:#ECEBE1;
+	margin-top: 6px;
+}
+
+.myPlanWrapper.first {
+	margin-top: 0px;
+}
+
+.myPlanInnerWrapper {
+	float:left;
+	width:492px;
+	height:119px;
+	margin-left:2px;
+	margin-top:2px;
+	border:1px solid #000;
+	background:#fff;
+	overflow:hidden;
+}
+
+h2.Blue18SemiBold {
+	font-size:18px;
+	font-family:StoneSansSemiBold, Myriad Pro, sans-serif!important;
+	font-weight:normal;
+	margin:0;padding:0;
+	margin-left:10px;
+	margin-top:10px;
+}
+p.myplan_subHeader {
+	font-size:14px;
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	font-weight:normal;
+	margin:0;padding:0;
+	margin-left:11px;
+	margin-top:3px;
+}
+p.B15 {
+	margin-bottom:15px;
+}
+ul.myplan_pdfList {
+	margin:0;padding:0;
+	float:left;
+	list-style-type:none;
+}
+ul.myplan_pdfList li {
+	margin:0;padding:0;
+	/*margin-left:60px;*/
+	padding-left:60px;
+	display:list-item;
+	width:418px;
+	min-height:50px;
+	float:left;
+	border-bottom:1px solid #D5CBC6;
+	margin-top:10px;
+	background:url('../images/bulletPoint.png') no-repeat;
+	background-position:47px 0px;
+}
+ul.myplan_pdfList li.first {
+	margin-top:0px;
+}
+ul.myplan_pdfList li span.left {
+	font-size:14px;
+	font-family:StoneSansSemiBold, Myriad Pro, sans-serif;
+	font-weight:normal;
+	float:right;
+	width: 338px;
+	position: relative;
+	bottom: 4px;
+	display:block;
+	margin-top:0px;
+}
+ul.myplan_pdfList li span.left p {
+	font-size:14px;
+	font-family:StoneSansItalic, Myriad Pro, sans-serif!important;
+	font-weight:normal;
+	margin:0;padding:0;
+	margin-bottom:5px;
+}
+ul.myplan_pdfList li span.right {
+	float:right;
+	width:80px;
+	min-height:50px;
+	display:block;
+}
+ul.myplan_pdfList li span.right div.pdfImageLink {
+	width:51px;
+	height:52px;
+	background:url('../images/pdfImage.png') no-repeat;
+	background-position-y:-5px;
+	float:left;
+	margin:0;padding:0;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheets/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.jscrollpane.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/fullpage_lightbox.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/tc_lightbox.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/theme.css" />
+	<script type="text/javascript" src="javascripts/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="javascripts/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="javascripts/jquery.mousewheel.js"></script>
+</head>
+<body>
+	<!-- <div id="xBtn" onclick="closeLightbox();"></div> -->
+	<div id="lightbox_wrapper">
+		<div id="lightbox_inner">
+			<center id="center">
+				<h2 class="cHeader first">Terms of Use</h2>
+				<hr>
+			</center>
+			<p class="cParagraph">Usage</p>
+<p class="cParagraph">THESE TERMS OF USE MAY BE CHANGED AT ANY TIME, WITHOUT PRIOR NOTICE TO ANY VISITOR</p>
+<br/><br/><br/><br/>			
+			<!--
+			<h3 class="cSubHeader">1.Item 1</h3>
+			<p class="cParagraph">The PSD only had partial data...not the entire T&C. Could not find the asset in the shared Google Folder.</p>
+			-->
+		</div>
+	</div>
+	<script>
+		function applyFancyboxCSS(){
+			$(".fancybox-iframe", window.parent.document).attr("scrolling","no");
+			$(".fancybox-iframe", window.parent.document).prop("scrolling","no");
+			if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){ //test for MSIE x.x;
+				$(".fancybox-iframe", window.parent.document)[0].contentWindow.document.body.scroll="no";
+			}
+			$(".fancybox-iframe", window.parent.document).addClass("fpLightboxIframe");
+		}
+		$(document).ready(function(){
+			$('#lightbox_wrapper').jScrollPane({showArrows: true, autoReinitialise:true});
+			applyFancyboxCSS();
+			
+		});
+	</script>
+</body>

@@ -1,0 +1,644 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>live</title>
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/style-int.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/jquery.fancybox.cr.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="assets/javascripts/ui-1.10.3/jquery-ui-1.10.3.custom.css" />
+
+    <script type="text/javascript" src="assets/javascripts/hf.logger.js"></script>
+
+	<script type="text/javascript" src="assets/javascripts/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="assets/javascripts/jquery.migrate-1.2.1.min.js"></script>
+
+    <script type="text/javascript" src="assets/javascripts/jquery.tools-1.2.7.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/jquery-ui-1.10.3.custom.min.js"></script>
+
+    <script type="text/javascript" src="assets/javascripts/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/healthfleet_api.js"></script>
+
+    <script type="text/javascript" src="//d36pfzlm4aixmv.cloudfront.net/stable_v3/addlive-sdk.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/addlive.js"></script>
+
+    <script src="/assets/javascripts/addlive-setup-assistant/addlive-ui-sdk.min.js" type="text/javascript"></script>
+    <script src="/assets/javascripts/addlive-setup-assistant/SetupAssistant.js" type="text/javascript"></script>
+    <script src="/assets/javascripts/addlive-setup-assistant/SA_Connectivity.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/addlive.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/addlive-setup-assistant.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/theme.css" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+</head>
+
+<body>
+
+    <div id="addlive-info" class="five-three">
+        <div id="addlive-session-info" style="float:left">session info</div>
+        <div id="addlive-duration-info" style="float:right">duration info</div>
+    </div>
+    <div id="addlive-live-video" class="live-video five-three">
+        <div id="addlive-lc-live-video" class="lc-live-video five-three" style="position:relative">
+
+            <div id="tut4CtrlWrapper">
+                <div class="closebtn">
+                    <img id="close-settings" src="../images/fancybox-close.png" />
+                </div>
+                <div class="content">
+                    <!--Video capture device configuration -->
+                    <div class="ctrl-wrapper first">
+                        <label for="camSelect">Video Capture device:</label>
+                        <br/>
+                        <select id="camSelect" class="ctrl">
+                            <option value="-1">Loading...</option>
+                        </select>
+                        <div class="controls">
+                            <div id="controlsLocalPreview"></div>
+                            Send video:
+                            <input id="publish-video-checkbox" type="checkbox" checked="checked" />
+                        </div>
+                    </div>
+
+                    <!--Audio capture device configuration -->
+                    <div class="ctrl-wrapper second">
+                        <label for="micSelect">Audio Capture device:</label>
+                        <br/>
+                        <select id="micSelect" class="ctrl">
+                            <option value="-1">Loading...</option>
+                        </select>
+                        <div class="controls">
+                            <div id="micActivityBar" class="micActivityBar slider2 ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"></div>
+                            Send audio:
+                            <input id="publish-audio-checkbox" type="checkbox" checked="checked" />
+                        </div>
+                    </div>
+
+                    <!--Audio output device configuration -->
+                    <div class="ctrl-wrapper">
+                        <label for="spkSelect">Audio Output device:</label>
+                        <br/>
+                        <select id="spkSelect" class="ctrl">
+                            <option value="-1">Loading...</option>
+                        </select>
+                        <div class="controls">
+                            <div id="play-test-sound-error">The selected speakers don't seem to be working. Please select a different option.</div>
+                            <div class="volumeCtrlSlider slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                                <a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript://nop" style="left: 42%;"></a>
+                            </div>
+                            <div class="test-sound-btn-wrap">
+                                <span id="play-test-sound-button" class="bluebtn"><a id="testSound" href="javascript:playTestSound();">Play Test Sound</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ctrl-wrapper">
+                        <div class="controls">
+                            <span id="launch-connection-test-button" class="bluebtn"><a id="launchConnectionTest" href="#connection-test">Launch Connection Test</a></span>
+                            <div id="connection-test">
+                                <div class="adlSetupAssistant">
+                                    <div class="wrapper">
+                                        <div class="inner-wrapper">
+                                            <div class="adl-page4 main">
+                                                <div class="tabs-holder-outer-wrapper">
+                                                    <div class="tabs-holder-inner-wrapper">
+                                                        <div class="tabs-holder">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="addlive-install-screen" class="five-three">
+                <div id="install-plugin-heading" class="live-heading-text">Plugin Installation</div>
+                <div id="install-plugin-text" class="live-subheading-text">Please click on the following link and install the required plugin for your video chat. It should take about 30 seconds.</div>
+                <img class="live-image" src="assets/images/CR-live-powered-by.png" />
+                <br/>
+
+                <a id='addlive-installBtn' src='' class='bluebtn'>Install HealthFleet Plugin</a>
+            </div>
+
+            <div id="addlive-loading-screen" class="five-three">
+			<p class="allow-plugin">Please allow the plugin to initiate the session.</p>
+                <div class="live-heading-text">PREPARING ROOM</div>
+                <div class="live-subheading-text">Please wait while we prepare this room for you.</div>
+                <div id="initProgressBar"></div>
+                <img class="live-image" src="assets/images/CR-live-powered-by.png" />
+            </div>
+
+
+            <div id="addlive-waiting-screen" class="five-three">
+                <div id="waiting-for">Waiting for <span id="member-name"></span> to arrive.</div>
+                <div id="waiting-session-title" class="live-heading-text"></div>
+                <div id="waiting-session-time" class="live-subheading-text"></div>
+                <div id="waiting-counselor-name" class="live-subheading-text"></div>
+                <img class="live-image" src="assets/images/CR-live-powered-by.png" />
+                <br/>
+                <span id="addlive-start-session-span" class="graybtn"><a href="#" id="addlive-start-session">start session</a></span>
+            </div>
+
+            <div id='camera-disabled-text' class="five-three">
+                <span>Video is not currently being shared</span>
+            </div>
+
+            <!-- Beginning of the video feeds rendering section -->
+            <div id="renderingWrapper" class="rendering-wrapper" style="background-color:#FFFFFF; display:none;">
+
+                <div id="localVideo" class="render-widget five-three">
+                    <div style="display: none;">
+                        Local preview (user id: <span id="localUserIdLbl">undefined</span>)
+                    </div>
+                    <div id="renderLocalPreview" class="render-wrapper" style='display:none;'></div>
+                </div>
+            </div>
+            <!-- End of the video feeds rendering section -->
+            <!-- Beginning of the templates section. There is only one template -  remote video feed renderer -->
+            <div id="templatesContainer">
+                <div id="rendererTmpl" class="render-widget remote-renderer five-three" style="display:none;">
+                    <div style="display:none;">
+                        Remote user (user id: <span class="user-id-wrapper">undefined</span>).
+                        <span class="muted-indicator">Audio is muted</span>
+                    </div>
+                    <div class="render-wrapper"></div>
+                    <div style="display: none;" class="no-video-text"></div>
+                </div>
+            </div>
+
+            <!-- End of the templates section. -->
+            <div id="lc-live-video-controls" style="margin:0px; z-index:2; position:relative; top:-53px; background-image:url('assets/images/live-toolbar.jpg'); width:100%;">
+                <div style="float:left; display:inline; padding:0px 10px 0px 10px;">
+                    <a id="addlive-settings-button">
+                        <img src="assets/images/live-settings.jpg" class="addlive-button" />
+                    </a>
+                </div>
+                <div id="lc-live-video-nav" style="float:right; display:inline; padding:0px 10px 0px 10px;">
+                    <a id="end-session-button" href="#end-session-message-popup" class="lightbox">
+                        <img src="assets/images/live-phone.jpg" class="addlive-button" />
+                    </a>
+                </div>
+                <div style="text-align: center; margin-left: auto; margin-right: auto;">
+                    <a href="javascript:toggleMic();" id="microphone">
+                        <img src="assets/images/live-microphone.jpg" class="addlive-button" />
+                    </a>
+                    <a href="javascript:toggleCamera();" id="camera">
+                        <img src="assets/images/live-camera.jpg" class="addlive-button" />
+                    </a>
+                    <a id="chatToggle" href="javascript:toggleChat();">
+                        <img src="assets/images/live-chat.jpg" class="addlive-button" />
+                    </a>
+                    <!-- 						<a href="#" id="fullscreen"><img src="assets/images/live-fullscreen.jpg" class="addlive-button"/></a>
+									<a href="#screen-share-popup" id="screenshare-button"><img src="assets/images/live-screenshare.jpg" class="addlive-button"/></a>
+		 -->
+                </div>
+            </div>
+
+        </div>
+        <div id="chat-container">
+            <div id="chat" class="chat-widget addlive">
+                <div id="chat-colored-background">
+                    <div id="msgsSink" class="messages-sink"></div>
+
+                    <div class="messages-input" style="padding-top:10px;">
+                        <textarea id="msgInput" placeholder="Type your message here..." rows="2" cols="100"></textarea>
+                    </div>
+                </div>
+                <div style="padding-top: 10px;">
+					<div style="display:none;">
+						<label for="targetSelect">Send message to:</label>
+						<select id="targetSelect">
+							<option value="all">ALL</option>
+						</select>
+					</div>
+                    <span class="bluebtn"><a id="sendBtn" class="send-btn disabled" href="javascript://nop">Send</a></span>
+                    <input type="checkbox" id="enterSends" checked="checked" style="margin-left:50px;" />enter sends message
+                </div>
+            </div>
+            <div id="templatesContainer" style="display: none;">
+                <div id="msgTmpl" class="msg-itm">
+                    <div class="msg-header">
+                        User <span class="userid-wrapper"></span>  <span class="direct-indicator hidden">(direct message)</span>
+                    </div>
+                    <div class="msg-content"></div>
+                    <hr />
+                </div>
+            </div>
+        </div>
+
+        <a id="show-error" href="#error-message-popup" class="lightbox"></a>
+        <div id="error-message-popup" style="display: none;">
+            <div class="ac-popup-nopad">
+                <div class="whatis-lightbox-title">Oops!</div>
+                <p>It looks like we're having some trouble establishing a connection to our server. If this problem persists please report the following message to our
+                    <a href="mailto:support@healthfleet.com">Support Team</a>
+                </p>
+                <div id="error-message" style="font-style:italic;"></div>
+            </div>
+        </div>
+
+        <div id="end-session-message-popup" style="display: none;">
+            <div>
+                <div style="text-align:center">
+                    <h1>Leave Session?</h1>
+                </div>
+                <div style="width:300px; text-align:center;">
+                    <p>You are about to leave the session.</p>
+                    <p>Are you sure?</p>
+                    <p>
+                        <a href="#" id="addlive-cancel">cancel</a>
+                        &nbsp;
+                        <span class="bluebtn"><a href="#" id="addlive-end-session">end session</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <a id="show-session-feedback" href="#session-feedback-popup" class="lightbox"></a>
+        <div id="session-feedback-popup" style="display: none;">
+            <div>
+                <div style="text-align:center">
+                    <h1>Session Complete</h1>
+                </div>
+                <div style="width:100%; text-align:center;">
+                    <p>Your live session has ended.</p>
+                    <p>Please enter your session notes and click &ldquo;done&rdquo;.</p>
+                    <textarea id="session-notes" rows="5" style="width:85%;"></textarea>
+                    <div style="padding-top:10px;">
+                        <input type="radio" name="status" value="Completed" checked />Session Completed
+                        <input type="radio" name="status" value="Missed" />Member Did Not Attend
+                    </div>
+                    <div style="padding-top:10px; width:50%; margin:0 auto;">
+                        <span class="bluebtn"><a href="#" id="submit-session-notes">DONE</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pluginContainer"></div>
+    </div>
+
+    <script>
+        function parseQueryString() {
+            var query = (window.location.search || '?').substr(1),
+                map = {};
+            query.replace(/([^&=]+)=?([^&]*)(?:&+|$)/g, function (match,
+                key, value) {
+                (map[key] = map[key] || []).push(value.split('%20').join(' '));
+            });
+            return map;
+        }
+
+         /////////////////////////
+         // parameters:	
+         // userid - the addlive user id
+         // salt - addlive salt
+         // exp - session expiration in seconds since ...
+         // hash - addlive hash
+         // appid - addlive app id
+         // sid - sf event id / addlive scope id
+         // un - the user (host/coach) name
+         // st - start time in UTC
+         // et - end time in UTC
+         // sbj - session subject
+         // sty - session type
+         // mn - member name
+         // sl - session length in minutes
+         // oid - owner id (sf coach id)
+         // wid - what id (one-on-one/group == sf member id / sf organization id)
+         // igs - true if Is Group Session
+         // ssi - session settings id (String)
+         /////////////////////////
+        $(document).ready(function () {
+
+        	$("#show-error").fancybox();
+        	
+            var params = parseQueryString();
+			$('#addlive-settings-button').bind('click',toggleSettings);
+            $('#launchConnectionTest').fancybox({
+                afterShow: function () {
+                    ADL.UI.SetupAssistant.updateContainer();
+                    $('.adl-page4').show()
+                    var saSettings = HF.getAddLiveSASettings(ADLT.scopeId, params.ssi[0]);
+                    var testConnDescr = saSettings.testConnectionDescriptor;
+                    var linkQualityConnDescr = saSettings.linkQualityConnectionDescriptor;
+
+                    var options = {
+                        testConnDescr: testConnDescr,
+                        linkQualityConnDescr: linkQualityConnDescr
+                    };
+                    ADL.UI.SAConnectivity.start(null, options);
+					
+                },
+                afterClose: function () {
+                    $('.connectingMsg').html('Check Your Connections');
+                    $('#connection-test .adlSetupAssistant .check-list ol li')
+                        .removeClass('warning').removeClass('valid')
+                        .removeClass('invalid').removeClass('skipped')
+                        .removeClass('loading').addClass('loading');
+
+                    ADL.UI.SAConnectivity.terminate();
+                }
+            });
+            $.ajax({
+                url: "addlive-setup-assistant.html",
+                dataType: "html",
+            }).done(function (data) {
+                var html = $('.adl-page4 .tab', $(data));
+                $('#connection-test .tabs-holder').append(html);
+            });
+
+            $('#end-session-button').fancybox();
+            //$('#addlive-settings-button').fancybox();
+            $('#show-session-feedback').fancybox();
+
+            $('#micActivityBar').progressbar({
+                value: 10
+            });
+            $('.volumeCtrlSlider').slider({
+                min: 0,
+                max: 255,
+                animate: true,
+                value: 127,
+                slide: function (e, ui) {
+                    ADL.getService().setSpeakersVolume(ADL.r(), ui.value);
+                }
+            });
+
+            $('#close-settings').click(function () {
+                toggleSettings();
+            });
+
+            $('#waiting-session-title').html(params.sbj[0]);
+
+            //Salesforce converts to the local user time automatically for us
+            // use st for start time, and st+sl for end time.  (et is not used for now)
+            var startString = moment(params.st[0], "YYYY-MM-DD HH:mm:ss").format("h:mma");
+            var endString = moment(params.st[0], "YYYY-MM-DD HH:mm:ss").add('m', params.sl[0]).format("h:mma");
+
+            $('#waiting-session-time').html(startString + "-" + endString);
+            $('#waiting-counselor-name').html((params.username || params.un)[0]);
+            $('#member-name').html(params.mn[0].replace("%20", " "));
+            $("#addlive-session-info").html(params.sbj[0] + " with " + params.mn[0]);
+            $("#addlive-duration-info").html(params.sl[0] + " minutes");
+            $('#addlive-info').show();
+
+            ADLT.APPLICATION_ID = params.appid[0];
+            ADLT.userId = parseInt(params.userid[0]);
+            ADLT.username = ((params.username || params.un)[0]);
+
+            ADLT.authDetails.salt = ((params.sessionsalt || params.salt)[0]);
+            ADLT.authDetails.userId = ADLT.userId;
+            ADLT.scopeId = ((params.sessionid || params.sid)[0]);
+
+            ADLT.authDetails.expires = parseInt((params.sessionexpirationsecs || params.exp)[0]);
+
+            ADLT.authDetails.signature = ((params.signaturehash || params.hash)[0]);
+
+            ADLT.readyForConnectionAttempt = function () {
+                $("#addlive-start-session-span").removeClass('graybtn').addClass('bluebtn');
+            };
+
+            $("#initProgressBar").progressbar({
+                value: 0
+            });
+
+            $(ADLT.onDomReady);
+
+            // log host arrival - regardless of remote session connection
+            logHostArrival();
+
+            $('#addlive-live-video').show();
+            //handle starting of session	
+            $("#addlive-start-session-span").click(function () {
+                if ($(this).attr('class') !== 'graybtn') {
+                    ADLT.signalJoin();
+                    ADLT.localSessionStarted = true;
+                    $(this).removeClass('bluebtn').addClass('graybtn');
+                    $(this).find('a').html('waiting');
+                }
+                if (ADLT.remoteSessionStarted === true) {
+                    startSession();
+                }
+                return null;
+            });
+
+            function logHostArrival() {
+                // eventId, expirationTime, liveVideoHostId, liveVideoHostToken, fHandler
+                HF.logAttendanceHostArrival(
+                    (params.sessionid || params.sid)[0], // eventId 
+                    (params.sessionexpirationsecs || params.exp)[0], // expirationTime 
+                    params.userid[0], // liveVideoHostId
+                    (params.signaturehash || params.hash)[0], // liveVideoHostToken 
+                    params.ssi[0],		// sessionSettingsId -- Session_Settings_Id__c
+                    function (data) {} // callback after logging attendance -- can initialize departure logging timer here 
+                );
+            }
+
+            function startSession() {
+                //	do not logHostArrival here bc we would lose the timestamp when coach arrived		
+                //		logHostArrival();
+
+                $('#renderingWrapper').show();
+                $('#localVideo').show();
+                $('#renderLocalPreview').show();
+                $("#addlive-waiting-screen").hide();
+                ADLT.toggleAudio(true);
+                ADLT.toggleVideo(true);
+                showChat();
+            }
+            ADLT.startSession = startSession;
+
+            //handle ending of session
+            $("#addlive-end-session").click(function () {
+                // eventId, expirationTime, liveVideoHostId, liveVideoHostToken, fHandler
+                HF.logAttendanceHostDeparture(
+                    (params.sessionid || params.sid)[0], // eventId 
+                    (params.sessionexpirationsecs || params.exp)[0], // expirationTime 
+                    params.userid[0], // liveVideoHostId
+                    (params.signaturehash || params.hash)[0], // liveVideoHostToken
+                    params.ssi[0],		// sessionSettingsId -- Session_Settings_Id__c
+                    function (data) {} // callback after logging attendance -- such as restart the timer
+                );
+				$('#addlive-settings-button').unbind('click',toggleSettings);
+                $('#renderingWrapper').find('.remote-renderer').html('').remove();
+                $('#renderLocalPreview').html('');
+
+                ADL.disposePlatform();
+                $.fancybox.close();
+                $("#show-session-feedback").click();
+            });
+
+            $("#addlive-cancel").click(function () {
+                $.fancybox.close();
+            });
+
+            $("#submit-session-notes").click(function () {
+                // submit Status & Notes 
+                var sessionForm = new Object();
+
+                sessionForm.eventId = params.sid[0];
+                sessionForm.coachId = params.oid[0];
+                sessionForm.sessionStatus = $('input:radio[name=status]:checked').val();
+                sessionForm.memberId = params.wid[0];
+                sessionForm.isGroupSession = params.igs[0];
+
+                sessionForm.noteType = params.sty[0];
+                sessionForm.noteContent = $('#session-notes').val();
+                sessionForm.isPublished = true; // todo for now all notes are published
+
+                HF.updateSession(sessionForm, function () {
+                    $('#addlive-live-video').hide();
+                    $('#addlive-info').hide();
+                    $.fancybox.close();
+                    top.window.close(); // close the counseling window popup
+                });
+            });
+
+            $('#msgInput').live("keypress", function (e) {
+                if (e.keyCode == 13) {
+                    var send = $('#enterSends').attr('checked');
+                    if (send) {
+                        $('#sendBtn').trigger('click');
+                        return false;
+                    }
+                    return true;
+                }
+            });
+        });
+
+         // handle microphone toggling
+        var micOn = true;
+
+        function toggleMic() {
+			if (!(ADLT.remoteSessionStarted && ADLT.localSessionStarted)) {
+				return;
+				/* When remote session itself is not started, video can not be turned off. UI would say it is turned off, but coach can see member video. Fix for CFE-324. */
+			}
+			
+            if (micOn) {
+                $('#microphone').find('img').attr('src', 'assets/images/live-microphone-disabled.jpg');
+                $('#microphone').find('img').addClass('addlive-button-disabled');
+                $('#microphone').find('img').removeClass('addlive-button');
+
+            } else {
+                $('#microphone').find('img').attr('src', 'assets/images/live-microphone.jpg');
+                $('#microphone').find('img').addClass('addlive-button');
+                $('#microphone').find('img').removeClass('addlive-button-disabled');
+            }
+
+            micOn = !micOn;
+            ADLT.toggleAudio(micOn);
+
+            $("#publishAudioChckbx").attr('checked', micOn);
+        }
+
+         //handle camera SHARING toggling
+        var cameraOn = true;
+
+        function toggleCamera() {
+			if (!(ADLT.remoteSessionStarted && ADLT.localSessionStarted)) {
+				return;
+				/* When remote session itself is not started, video can not be turned off. UI would say it is turned off, but coach can see member video. Fix for CFE-324. */
+			}
+			
+            if (cameraOn) {
+                $('#camera').find('img').attr('src', 'assets/images/live-camera-disabled.jpg');
+                $('#camera').find('img').addClass('addlive-button-disabled');
+                $('#camera').find('img').removeClass('addlive-button');
+
+            } else {
+                $('#camera').find('img').attr('src', 'assets/images/live-camera.jpg');
+                $('#camera').find('img').addClass('addlive-button');
+                $('#camera').find('img').removeClass('addlive-button-disabled');
+            }
+
+            cameraOn = !cameraOn;
+            ADLT.toggleVideo(cameraOn);
+
+            $("#publishVideoChckbx").attr('checked', cameraOn);
+        }
+
+         //handle chat hiding and showing
+        var chatHidden = true;
+
+        function toggleChat() {
+            if (chatHidden) {
+                $('#chat-container').slideDown().promise().done(
+                    function () {
+                        $('#msgsSink').scrollTo('max');
+                    });
+            } else {
+                $('#chat-container').slideUp();
+            }
+            chatHidden = !chatHidden;
+        }
+
+        function showChat() {
+            if (chatHidden && ADLT.remoteSessionStarted && ADLT.localSessionStarted) {
+                $('#chat-container').slideDown().promise().done(
+                    function () {
+                        $('#msgsSink').scrollTo('max');
+                    });
+                chatHidden = !chatHidden;
+            }
+        }
+
+        var settingsOpen = false
+
+            function toggleSettings() {
+                $('#tut4CtrlWrapper').slideToggle(400, function () {
+
+                    if (settingsOpen) {
+                        ADL.disposeRenderer('controlsLocalPreview');
+                        ADL.getService().monitorMicActivity(ADL.r(), false);
+                        /* ADL.renderSink({
+	        sinkId:sinkId,
+	        containerId:'renderLocalPreview',
+	        mirror:true
+	      }); */
+                    } else {
+                        /* 			ADL.disposeRender('renderLocalPreview'); */
+                        ADL.getService().monitorMicActivity(ADL.r(), true);
+						if ($('#renderLocalPreview object param[name="vcamid"]').val())
+						{
+							ADL.renderSink({
+								sinkId: $('#renderLocalPreview object param[name="vcamid"]').val(),
+								containerId: 'controlsLocalPreview',
+								mirror: true
+							});
+						}
+                    }
+                    settingsOpen = !settingsOpen;
+                });
+            }
+
+            function playTestSound() {
+                $('#play-test-sound-error').hide();
+
+                var onSuccHandler = function () {};
+                var onErrHandler = function () {
+                    $('#play-test-sound-error').show();
+                };
+
+                ADL.getService().startPlayingTestSound(
+                    ADL.r(onSuccHandler, onErrHandler));
+            }
+    </script>
+</body>
+
+</html>

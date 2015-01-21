@@ -1,0 +1,383 @@
+h2, h3{padding:0;margin:0;}
+#regWrapper{
+	float:left;
+	margin-left:55px;
+	width:940px;
+	font-family:StoneSans, Myriad Pro, sans-serif;
+/* 	height:490px; */
+	margin-top: 10px;
+}
+.blueButton{
+	height:22px;
+	border:3px solid #fff;
+	outline:1px solid #003366;
+	background:#003366;
+	font-family:StoneSansSemiBold;
+	font-size:11px;
+	color:#fff;
+}
+.regSelect{
+	border: 1px solid black;
+	height: 20px!important;
+}
+.regSelectLeft {
+	width:261px;height:20px;
+}
+.regSelectRight {
+	height:20px;width:260px;
+}
+#state{
+	max-width: 100px;
+}
+#regTop{
+	float:left;
+	width:100%;
+	height:38px;
+	background-color:#fff;
+}
+div.regSuccessful{
+	font-weight:normal!important;
+	width:860px!important;
+	height:325px!important;
+}
+div.regSuccessful h2.regS{
+	margin:0!important;
+	padding: 10px 0 10px 0!important;
+	font-family:StoneSansSemiBold, Myriad Pro, sans-serif!important;
+	font-size:21px!important;
+	font-weight:normal!important;
+}
+#cancelLink{
+	font-family:StoneSans, Myriad Pro, sans-serif; text-transform:uppercase; font-weight:bold; font-size:12px;
+	text-decoration:none;
+}
+div.regSuccessful h3.regS{
+	margin:0!important;padding:0!important;
+	font-family:StoneSansSemiBold, Myriad Pro, sans-serif!important;
+	font-size:14px!important;
+	margin-top:10px!important;
+	font-weight:normal!important;
+	height:auto!important;
+}
+div.regSuccessful p{
+	margin: 0;
+	padding: 0 0 10px 0;
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	font-size:14px;
+	font-weight:normal!important;
+}
+div.regSuccessful p.pItalic{
+	margin:0;padding:0;
+	font-family:StoneSansItalic, Myriad Pro, sans-serif;
+	font-size:14px;
+	font-weight:normal!important;
+}
+div.regSuccessful p#pLogin{
+	margin:0;padding:0;
+	font-family:StoneSansSemiBoldItalic, Myriad Pro, sans-serif;
+	font-size:14px;
+	font-weight:normal!important;
+	margin-top:25px;
+}
+div.regSuccessful p#pNote{
+	margin:0;padding:0;
+	font-family:StoneSansItalic, Myriad Pro, sans-serif;
+	font-size:14px;
+	font-weight:normal!important;
+	margin-top:25px;
+}
+#regTop ul{
+	float:left;
+	width:524px;
+	height:35px;
+	list-style-type:none;
+	display:inline-block;
+	background:url('../images/arrows1.png') no-repeat;
+	margin:0;padding:0;	
+}
+#regTop ul.step2{
+	background:url('../images/arrows2.png') no-repeat!important;
+}
+#regTop ul.step3{
+	background:url('../images/arrows3.png') no-repeat!important;
+}
+#regTop ul li{
+	margin-left:70px;
+	padding:0px;
+	font-family:StoneSansBold, Myriad Pro, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	list-style-type:none;
+	display:inline-block;
+	max-width:90px;
+	line-height:12px;
+	margin-top:5px;		
+	text-align:center;
+}
+#regTop ul li.first{
+	margin-left:31px;	
+}
+#regTop ul li.last{
+	max-width:150px;
+	/*align li text*/
+	position: relative;
+	top: -6px;
+}
+#regTop #spacer{
+	width:100%;
+	height:3px;
+	float:left;
+	background:#fff;
+}
+input.readonly{
+	border:none!important;
+}
+#zip{
+	width:80px!important;
+}
+table.M20T{
+	margin-top:20px;
+	width:430px!important;
+}
+span.i{
+	font-family:StoneSansItalic, Myriad Pro, sans-serif;
+}
+span.blue{
+	color:#003366;
+}
+p.tos{
+	font-family:StoneSans;
+	margin-top:25px;
+	margin-bottom:20px;
+	font-size:13px;
+}
+#next{
+	margin-right: 20px;
+	padding-bottom: 10px;
+	float: right;
+}
+span.cancel{
+	cursor:pointer;
+}
+.nextBtn{}
+.editBtn{
+	display:none;
+}
+
+.disabledbtn { cursor:default; opacity:0.4; filter:alpha(opacity=40); /* For IE8 and earlier */ }
+.disabledbtn a:hover { color:#FFFFFF; }
+.disabledbtn span:hover { color:#FFFFFF; }
+
+
+.closeWindowBtn{
+	width:181px!important;
+	height:25px;
+	display:inline-block;
+	background:url("../images/closeWindowBtn.png");
+	border:none!important;
+}
+#regMain{
+	width:100%;
+	float:left;
+	background:#ECEBE1;
+}
+#regMain h3{
+	font-family:StoneSansItalic, Myriad Pro, sans-serif;
+	font-size:13px;
+	font-weight:normal;
+	margin-top:25px;
+	margin-left:20px;
+}
+#regMainInner{
+	width:900px;
+	overflow-y:auto;
+	padding: 10px 0px 10px 0px;
+	margin-left:20px;
+	margin-top:13px;
+	margin-bottom:20px;
+	background:#fff;
+	border: 1px solid #D5CBC6;
+}
+#regMainInner h3{
+	font-family:StoneSansSemiBold, Myriad Pro, sans-serif;
+	font-size:13px;
+	width:100%;
+	float:left;
+	height:32px;
+	margin-top:12px;
+	margin-left:30px;
+}
+#regMainInner h3 span.Expires{
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	margin-left:45px
+}
+.regMainInnerLeft{
+	float:left;
+	width:405px;
+	margin-left:30px;
+}
+.regMainInnerLeft.withBorder{
+	border-right:1px solid #555;
+}
+.regMainInnerRight{
+	float:left;
+	width:430px;
+	margin-left:30px;
+}
+#regMainInner h2{
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	font-size:15px;
+}
+#regMainInner span.caption{
+	font-family:StoneSansItalic, Myriad Pro, sans-serif;
+	font-size:14px;
+	font-weight: Normal;
+}
+#regMainInner td{
+	font-size:13px;
+}
+#regMainInner td.label{
+	width:115px;
+	font-family:StoneSansSemiBold, Myriad Pro, sans-serif;
+	font-weight:normal;
+	vertical-align: top;
+}
+
+#regMainInner td.labelRight{
+	width:150px;
+	font-family:StoneSansSemiBold, Myriad Pro, sans-serif;
+	font-size:13px;
+	font-weight:normal;
+}
+span.zipLabel{
+	font-family:StoneSansSemiBold, Myriad Pro, sans-serif;
+	font-size:13px;
+	font-weight:normal;
+}
+span.smallI{
+	font-family:StoneSans;
+	font-size:12px;
+}
+span.right{
+	float:right;
+	margin-right: 13px;
+	width: 144px;
+}
+#termsAgreed{max-width:20px!important;float:left!important;}
+#regMainInner td.input{
+	width:283px;
+	font-family:StoneSans, Myriad Pro, sans-serif;
+	font-size:13px;
+	font-weight:normal;
+	height:24px;
+}
+#regMainInner input{
+	width:91.3%;
+	height: 16px;
+}
+#regMainInnerRight input {
+	max-width: 252px;
+	float: right;
+	margin-right: 20px;
+}
+#chkTOS{
+	width:15px!important;
+	display:inline!important;
+	float:left!important;
+	margin-right:0px!important;
+	max-width:15px!important;
+	width:15px!important;
+}
+#errorDiv{
+	height:auto;/*22px;*//*32px total*/
+	padding: 7px 12px;
+	visibility:hidden;
+	/*font styles*/
+	font-family:StoneSansBold, Myriad Pro, sans-serif;
+	font-size:11px;
+	margin: 0 auto;
+}
+
+#errorDiv span{
+	position: static;
+	float: left;
+	display: inline-block;
+	width: 90%;
+}
+#xBtn{
+	width:19px;
+	height:19px;
+	background:url('../images/xBtn1.png');
+	display:inline-block;
+	float: left;
+	position: static;
+	margin: 0 7px 0 0;
+	cursor: pointer;
+}
+.clear {
+	clear: both;
+}
+#errorMsg {
+	text-transform: uppercase;
+}
+#mask{
+	display: none; 
+	filter: alpha(opacity=70);
+	 -moz-opacity: 0.7;	 
+     opacity: 0.7; 
+     background-color: #666666;
+     width: 100%; 
+     height: 100%; 
+     z-index: 1000;
+     position: absolute; 
+     left: 0; 
+     top: 0; 
+     overflow: hidden;
+     text-align: center;
+     vertical-align: middle;
+}
+#cancelDialog{
+	font-family:calibri;
+	font-size:15px;
+}
+#cancelDialog center{
+	margin-top:5px;	
+	margin-bottom:5px;
+}
+span.semi-bold {
+	font-family:StoneSansSemiBold, Myriad Pro, sans-serif;
+}
+
+#health-program-details {
+	overflow-y:auto;
+	padding-bottom:20px;	
+}
+#health-program-details td.label{
+	width:auto;
+	padding-right:10px;
+}
+#regMainInner input#cvvNumberVisible {
+	width: 75px;
+}
+.lightbox {
+	display:none;
+}
+/*added for Registration page checkbox issue*/
+#regMainInner input#termsAgreed {
+	border: none;
+}
+
+/* Fix for 75090288 */
+#regMainInner input[type="checkbox"], #regMainInner input[type="radio"] { border-width:0px; border-style:none; }
+#regMainInner input[type="checkbox"] { padding:0px; }
+
+#regMainInner td.input .hiddenInput {
+    display: none;
+    padding: 0 4px 0 0;
+    width: 90%;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.available_states{
+	float:right;
+}

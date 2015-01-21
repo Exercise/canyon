@@ -1,0 +1,220 @@
+/* LIVE VIDEO FULL */
+
+#addlive { font-family:'StoneSans'; }
+
+#lc-live-video-nav span { font-size:20px; color:#c0c0c0; margin:0px 10px; }
+
+.render-wrapper { width:100%; height:100%; }
+.rendering-wrapper { width:100%; height:100%; }
+.remote-renderer { width:100%; height:100%; }
+
+#addlive-live-video.four-three { display:none; }
+#addlive-lc-live-video.four-three { background-color:#54301a; padding:15px; height:560px; width:774px; overflow: hidden; clear:both;}
+#rendererTmpl.four-three { width:774px; height:560px; position:absolute; }
+#localVideo.four-three {height:100px; width:133px; position:absolute; z-index:2; }
+
+#addlive-live-video.five-three { display:none; width:900px; }
+#addlive-lc-live-video.five-three { background-color:#54301a; padding:15px; height:540px; overflow: hidden; clear:both; }
+#rendererTmpl.five-three { width:100%; height:540px; position:absolute; }
+#localVideo.five-three { height:100px; width:167px; position:absolute; z-index:2; }
+
+.addlive-button { padding:10px; }
+.addlive-button:hover { opacity:0.4; filter:alpha(opacity=40); /* msie */ }
+
+.addlive-button-disabled { padding:10px; }
+
+#chat-container { text-align:center; display:none; height:200px; width:100%; padding-top:10px; clear:both; }
+#chat-colored-background { background:#ECEBE1; }
+#msgsSink.messages-sink { overflow:auto; height:75px; width:100%; text-align:left; }
+div.msg-content { padding-left: 10px; padding-right: 10px; font-size:12px; font-family:'StoneSans'; }
+.messages-input { width:900px; }
+#msgInput { width:99%; }
+
+#enterSends { margin-left: 20px; }
+
+#addlive-loading-screen.five-three { background-color:#FFFFFF; text-align:center; height:540px; width:100%; }
+div.live-heading-text { font-size:30px; padding:10px; padding-top:150px; }
+div.live-subheading-text {  font-size:20px; padding:10px; }
+#initProgressBar { width: 360px; width: 50%; margin: 0 auto; padding:10px; }
+img.live-image { padding:10px 10px 25px 10px;  }
+
+
+#addlive-info.five-three { width:900px; padding-bottom:25px; font-weight:bold; font-size:125%; display:none; }
+#addlive-session-info { float:left; }
+#addlive-duration-info {float:right; }
+
+#addlive-waiting-screen.four-three { background-color:#FFFFFF; text-align:center; z-index:2; display:none; }
+#addlive-waiting-screen.five-three { background-color:#FFFFFF; text-align:center; z-index:2; height:540px; display:none; }
+#waiting-for { font-style:italic; float:right; border:2px solid; border-radius:15px; border-color:#BBBBBB; width:150px; height:75px; padding:10px; margin:10px; }
+#camera-disabled-text.five-three { left:350px; top: 250px; background-color:#FFFFFF; text-align:center; z-index:2; display:none; position:absolute;}
+#addlive-install-screen.five-three { background-color:#FFFFFF; text-align:center; z-index:2; height:540px; display:none; }
+
+span.addlive-waiting-alert {  font-weight:bold; }
+span.addlive-waiting-name { font-weight:bold; }
+
+span.addlive-chat-echo { font-weight:bold; font-family:'StoneSansSemiBold'; }
+span.addlive-chat-received { font-weight:bold; font-family:'StoneSansSemiBold'; }
+
+.cancelSmall{ font-family:StoneSansBold, Myriad Pro, sans-serif; font-size:11px; color:#003366; padding-right:10px; }
+
+#screen-share-popup {
+	text-align:center;
+}
+
+#screen-share-popup-title {
+	padding-bottom:10px;
+	font-family: StoneSansSemiBold, Myriad Pro, sans-serif;
+	font-size: 18px;
+}
+
+#screen-share-template {
+	display:none;
+}
+
+.screen-share-option {
+	width:290px;
+	height:200px;
+	text-align:center;
+	float:left;
+	padding: 10px 5px;
+}
+
+.screen-share-option.selected {
+	width:286px;
+	height:196px;
+	background-color:#EFEFEF;
+	border:solid 2px #000000;
+}
+
+.screen-share-option:hover  {
+	width:288px;
+	height:198px;
+	background-color:#DDDDDD;
+	border:solid 1px #000000;
+}
+
+.screen-share-option:hover .screen-share-title {
+	color:#FFFFFF;
+}
+
+#refresh-div {
+	padding-top:10px;
+}
+
+#tut4CtrlWrapper {
+	border:3px double #000000;
+	display:none;
+	bottom:15px;
+	left:15px;
+	padding:2px;
+	height:530px;
+	width:250px;
+	position:absolute;
+	z-index:100;
+	background-color:#ECEBE1;
+}
+
+#tut4CtrlWrapper .closebtn {
+	padding:5px;
+	float:right;
+}
+
+#tut4CtrlWrapper #close-settings {
+	cursor:pointer;	
+}
+
+#tut4CtrlWrapper .content {
+	padding:10px;	
+}
+
+#tut4CtrlWrapper .content .ctrl-wrapper.first {
+	height:180px;
+	padding-top:10px;
+}
+
+#tut4CtrlWrapper .content .ctrl-wrapper.second {
+	height:110px;
+	padding-top:10px;
+}
+
+#tut4CtrlWrapper .content .ctrl-wrapper {
+	height:150px;
+	padding-top:10px;
+}
+
+#tut4CtrlWrapper .content .ctrl-wrapper .controls {
+	padding-top:5px;
+	text-align:center;
+}
+
+#tut4CtrlWrapper .content .ctrl-wrapper .test-sound-btn-wrap {
+	padding-top:10px;
+}
+
+#tut4CtrlWrapper #controlsLocalPreview {
+	width:90px;
+	height:90px;
+	margin:0 auto;
+	padding-bottom:5px;
+}
+
+#tut4CtrlWrapper #play-test-sound-error {
+	display:none;
+	padding-bottom:10px;
+}
+
+ 
+#micActivityBar .ui-state-default,
+#micActivityBar .ui-widget-content .ui-state-default,
+#micActivityBar .ui-widget-header .ui-state-default {
+	border: 1px solid #cccccc;
+	background: #f6f6f6 url(../images/addlive-setup-assistant/ui-bg_glass_100_f6f6f6_1x400.png) 50% 50% repeat-x;
+	font-weight: bold;
+	color: #1c94c4;
+}
+
+#micActivityBar .ui-widget-header {
+	background: #f6a828 url(../images/addlive-setup-assistant/ui-bg_gloss-wave_35_f6a828_500x100.png) 50% 50% repeat-x;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+
+
+/* 	I am sorry about this, but we need to leverage the main
+	addlive SA css and change a few things for this instance */
+#connection-test {
+	display:none;
+}
+	
+#connection-test .adlSetupAssistant {
+	position:relative;
+	background: #fff;
+}
+
+#connection-test .adlSetupAssistant .wrapper {
+	padding:0px;
+}
+
+#connection-test .adlSetupAssistant .inner-wrapper {
+	padding:0px;
+}
+	
+#connection-test .adlSetupAssistant .tabs-holder-inner-wrapper {
+	min-height:0px;
+	border:0px;
+	padding:0px;
+}
+
+#connection-test .adlSetupAssistant .tabs-holder-outer-wrapper {
+	padding:0px;
+}
+
+p.allow-plugin{
+	display:none;
+	background:red;
+	color:#fff;
+	font-size:12px;
+	margin:0;
+	padding:3px 0;
+}

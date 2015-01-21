@@ -1,0 +1,185 @@
+#calendar_wrapper{overflow-x:hidden;}
+/* ========================================================================= HF_Calendar 4.5 =================================================== */
+#ac-calendar { background-color:#fff; padding:2px; border: 1px solid #CDC1BA; }
+
+#ac-calendar a { text-decoration:none; }
+
+#ac-calendar-questions { /*background-image:url(../images/purple-gradient.jpg); background-repeat:no-repeat; background-position:top right;*/ width:365px; float:right; text-align:right; padding-right:15px; line-height:40px; margin-bottom:20px; color:purple; }
+
+/* HF.COM - JSP Version
+.caleQuest{ text-align:left; background:url(../../images/questionBgNarrow.jpg) no-repeat 0 0; width:200px; height:31px; margin:8px 10px 0 0; }
+.queBox{ padding:7px 0 0 7px; }
+.queBox span{ font:12px Verdana, Geneva, sans-serif; color:#660066; }
+.queBox input{ background:url(../../images/quetbt.png) no-repeat 0 0; width:114px; height:21px; font:bold 12px Tahoma, Geneva, sans-serif; color:#fff; border:none; padding-bottom:2px; cursor:pointer; }
+*/
+.calen_Cont { border: 1px solid #000; }
+
+/* Right Side */
+.calen_Righ { width:265px; height:auto; padding-top: 50px; display:none; }
+.calendar p{margin:0;padding:0;display:inline;}
+.whtThis { text-align:left; height:30px; }
+
+.whtThis a { text-decoration:underline; font:12px Tahoma, Geneva, sans-serif; color:#6d2185; float:right; }
+
+.whtThis a:hover { text-decoration:none; }
+
+.calPulse { font-size:12px; height:80px; }
+
+.calPulse img { float:left; margin-right:10px; }
+
+.calInput { background-color:#ffffff; border:1px solid #c0c0c0; padding:5px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; margin-bottom:15px; }
+
+.cal_Details { height:150px; background-color:#ffffff; border:1px solid #c0c0c0; padding:10px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; }
+
+.calSep { border-top:2px solid #c0c0c0; margin:25px 0px; }
+
+.details_box { overflow-y:auto; overflow-x:hidden; width:235px; height:150px; position:relative; }
+
+.calRow { padding:5px; }
+
+.calRowLast { padding:5px; height:70px; width:100%; }
+
+.calRowDivider { width:210px; border-bottom:2px solid #cccccc; padding:5px 0px; }
+
+.cal-row-time { display:inline; float:left; padding-left:5px; font-weight:bold; font-size:12px; width:75px; }
+
+.cal-row-description { margin-left:80px; }
+
+.cal-row-description-heading { color:#0060bd; font-size:14px; }
+
+.cal-row-description-buttons { }
+
+.cal-row-view { float:left; padding-right:20px; padding-top:5px; }
+
+.cal-row-cancel { padding-top:5px; }
+
+#whatsthisCalendar { width:600px; font-size:13px; }
+/* End Right Side */
+
+/* Left Side */
+.calen_Left { width:517px; padding-right:0px; margin-left:12px; /*height:auto; position:relative;*/ border-right:none; }
+
+.bigCal { background-color:#fff; padding:5px; }
+
+.calendar { display:block; margin:0px; padding:0px; }
+
+.calendar li { display:block; float:left; }
+
+.calendar li .resCalendar { display:block; width:510px; height:auto; border-bottom:1px solid #d4d9e6; }
+
+.calendar li .resCalendar .monthHeading {background-color: #fff;font-family:StoneSansSemiBold;font-size:16px;font-weight:normal;width:auto; padding:15px 0; text-align:center; -moz-border-radius:8px 8px 0px 0px; border-radius:8px 8px 0px 0px; -webkit-border-radius:8px 8px 0px 0px; }
+
+.calendar li .resCalendar .weeks { background-color:#ECEBE1; padding: 0; width:510px!important; height: 18px!important; border: 1px solid #d4d9e6; font-family:StoneSans!important;font-weight:normal!important;font-size:11px!important; }
+
+.calendar li .resCalendar .weeks .weeks_name { margin:0; text-align:center; font:12px StoneSans!important; width:72px; border-right:1px solid #d5cbc6; padding-bottom: 0px; padding-top: 2px;margin-top:0px!important; margin-bottom:0px!important; }
+
+.calendar li .resCalendar .weeks .lastName { border-right:none; }
+
+.calendar li .resCalendar .daysCont { width: 512px; height: 57px; background-color:#FFF; border-bottom:1px solid #d4d9e6; }
+
+.calendar li .resCalendar .daysCont p { margin:0px; }
+
+.calendar li .resCalendar .lasDaysCont { border-bottom:none; }
+
+.calendar li .resCalendar .daysCont .days { width:70px; border-right:1px solid #d4d9e6; height:55px; padding:1px; background-color:#fff; margin-top:0px!important; margin-bottom:0px!important; }
+
+.calendar li .resCalendar .daysCont .lastdays { /*border-right:none;*/ }
+.calendar li .resCalendar .daysCont .firstdays { border-left:1px solid #d4d9e6; }
+
+/* Nutrition Completed */
+.calendar li .resCalendar .daysCont .days .comp { display:inline; font:12px StoneSans; padding:1px 3px 2px 3px; }
+
+.calendar li .resCalendar .daysCont .days .comp a { color:#580D72; font:9px StoneSans; padding:0px 0px 0px 4px; }
+
+.calendar li .resCalendar .daysCont .days .comp a:hover { text-decoration:none; }
+
+.calendar li .resCalendar .daysCont .days .comp img { float:right; width:15px; height:15px; }
+
+/* Coaching Sessions scheduled */
+.calendar li .resCalendar .daysCont .daysCss { background-color:#ebebeb; }
+
+.calendar li .resCalendar .daysCont .daysCssHover { background-color:#cde4fc; }
+
+.calendar li .resCalendar .daysCont .daysCssSelected { background-color:#e1effd; }
+
+.calendar li .resCalendar .daysCont .days .csSched { display:inline; font:12px StoneSansSemiBold; }
+
+.calendar li .resCalendar .daysCont .days .csDesc { display:inline; font:12px StoneSans;  }
+
+.calendar-session-type { text-align:center; font:12px StoneSans;   } 
+
+.calendar li .resCalendar .daysCont .days .csSchedMulti { display:inline; /*background:url(../images/cal-cs-sched-multi-purple_plus_dot.png)
+		no-repeat 2px 0px;*/ padding:1px 0 2px 18px; font:10px StoneSans; /*color:#580D72#5d6885; */
+}
+
+/* Exercies day */
+.calendar li .resCalendar .daysCont .days .exrDay { display:block; background:url(../images/cal-ex-sched-blue_dot.png) no-repeat 2px 0px; padding:1px 0 2px 18px; font:11px Tahoma, Geneva, sans-serif; color:#0748AF; /*color:#d3773a; color:#5d6885; */
+}
+
+.calendar li .resCalendar .daysCont .days .exrDayCompleted { display:block; background:url(../images/cal-ex-done-green_dot.png) no-repeat 2px 0px; padding:1px 0 2px 18px; font:11px Tahoma, Geneva, sans-serif; color:#38A626; /*color:#e3ba3b; color:#5d6885; */
+}
+
+.calendar li .resCalendar .daysCont .days .exrDayBonus { display:block; background:url(../images/cal-exbonus-done-green_star.png) no-repeat 2px
+		0px; padding:1px 0 2px 18px; font:11px Tahoma, Geneva, sans-serif; color:#38A626; /*color:#e3ba3b; color:#5d6885; */
+}
+/* End Left Side */
+
+.calen_instruction { padding:10px 0px;display:none; }
+
+/* HF.COM - JSP Version
+.calen_instruction .expDay{ background:url(../../images/exrDay.gif) no-repeat 0 4px; padding:0 20px 0 20px; font:13px Verdana, Geneva, sans-serif; color:#5d5c5c; }
+.calen_instruction .calCss{ background:url(../../images/cssBuilt.gif) no-repeat 0 4px; padding:0 20px 0 20px; font:13px Verdana, Geneva, sans-serif; color:#5d5c5c; }
+.calen_instruction .calComp{ background:url(../../images/compArrow.gif) no-repeat 0 4px; padding:0 20px 0 20px; font:13px Verdana, Geneva, sans-serif; color:#5d5c5c; }
+.calen_instruction .calExcd{ background:url(../../images/compArrow_yel.gif) no-repeat 0 4px; padding:0 0px 0 20px; font:13px Verdana, Geneva, sans-serif; color:#5d5c5c; }
+*/
+.calen_instruction .calLegend { cursor:pointer; /*background:url(../../images/calLegendIcon.gif) no-repeat 0 4px; padding:0 0px 0 20px; */
+	color:#6d2185; }
+
+.calen_instruction .calLegend:hover { text-decoration:none
+}
+
+#calendarLegend { width:746px; }
+
+.calendar-lightbox-session { width:500px; }
+
+.calendar-lightbox-content { padding-top:10px; overflow:auto; }
+
+.calendar-lightbox-content-title { color:#0060bd; font-weight:bold; font-size:16px; }
+
+.calendar-lightbox-left { display:inline-block; width:125px; float:left; }
+
+.calendar-lightbox-right { float:left; }
+
+.calendar-lightbox-footer { padding-top:10px; border-top:2px solid #cccccc; }
+
+.calendar-lightbox-footer-left { line-height:120%; display:inline-block; width:250px; float:left; font-size:12px; color:#999999; }
+
+.calendar-lightbox-footer-right { float:right; }
+
+.calendar-lightbox-footer-text-link { float:left; display:inline; padding-right:20px; }
+
+.calendar-lightbox-footer-text-button { float:left; }
+
+#view-session { width:500px; }
+
+.prevMonth{
+	float:left;
+	width:14px;
+	height:13px;
+	background:url('../images/cal_arrowLeft.png');
+	margin-top:17px;
+ 	display:block;
+	background-repeat:no-repeat;
+}
+
+.nxtMonth{
+	float:right;
+	width:14px;
+	height:13px;
+	background:url('../images/cal_arrowRight.png');
+	margin-top:17px;
+	display:block;
+	background-repeat:no-repeat;
+}
+
+/* ========================================================================= End HF_Calendar_4.5 =============================================== */

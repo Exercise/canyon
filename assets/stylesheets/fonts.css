@@ -1,0 +1,28 @@
+/*font*/
+@font-face {
+ font-family: StoneSans;
+ src: url("../fonts/itc-stone-sans-medium-latin-1.eot"), /* IE9 */
+ url("../fonts/itc-stone-sans-medium-latin-1.ttf") format("truetype"); /* TTF file for CSS3 browsers */
+}
+@font-face {
+ font-family: StoneSansSemiBold;
+ src: url("../fonts/itc-stone-sans-semi-bold-latin-1.eot"), /* IE9 */
+ url("../fonts/itc-stone-sans-semi-bold-latin-1.ttf") format("truetype"); /* TTF file for CSS3 browsers */
+}
+@font-face {
+ font-family: StoneSansBold;
+ src: url("../fonts/itc-stone-sans-bold-latin-1.eot"), /* IE9 */
+ url("../fonts/itc-stone-sans-bold-latin-1.ttf") format("truetype"); /* TTF file for CSS3 browsers */
+}
+@font-face {
+ font-family: StoneSansItalic;
+ src: url("../fonts/itc-stone-sans-medium-italic-latin-1.eot"), /* IE9 */
+ url("../fonts/itc-stone-sans-medium-italic-latin-1.ttf") format("truetype"); /* TTF file for CSS3 browsers */
+}
+@font-face {
+ font-family: StoneSansSemiBoldItalic;
+ src: url("../fonts/itc-stone-sans-semi-bold-italic-latin-1.eot"), /* IE9 */
+ url("../fonts/itc-stone-sans-semi-bold-italic-latin-1.ttf") format("truetype"); /* TTF file for CSS3 browsers */
+
+}
+/*end font*/

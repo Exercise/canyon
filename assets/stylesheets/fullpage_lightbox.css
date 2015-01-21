@@ -1,0 +1,115 @@
+body{font-family:StoneSans;font-size:13px;}
+#lightbox_wrapper{
+	width:737px;
+	/*toggle jscrollPane styling*/
+	height:552px;
+	max-height:552px;
+	margin-top:10px;
+	overflow:auto;
+	/*min-height for no scroll*/
+	/*min-height:602px;*/
+/* 	box-shadow: 2px 2px 2px #aaa; */
+/* 	border:1px solid #cab298; */
+	margin:0 auto;
+	background: #fff;
+}
+#lightbox_inner{
+	width:540px;
+	margin:0 auto;
+	overflow:auto;
+}
+#lightbox_scroll{
+	height: 582px;
+	width: 20px;
+	float: right;
+	padding-top: 20px;
+}
+#xBtn{
+	position: relative;
+	right: 8px;
+	top: 19px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	float: right;
+	background: url('../images/xBtn3.png');
+	z-index:10000;
+}
+h2.first{
+	margin-top:50px;
+}
+hr{
+	width:537px;
+	/*html5 boilerplate hr code with our color*/
+	display: block; height: 1px;
+    border: 0; border-top: 1px solid #e1d3c5;
+	/*end boilerplate hr code*/
+}
+.cHeader{
+	font-family:StoneSansSemiBold;
+	font-size:28px;
+	font-weight:normal;
+}
+.cSubHeader{
+	font-family:StoneSansSemiBold;
+	font-size:16px;
+	font-weight:normal;
+	margin-top:20px;
+	margin-bottom:3px;
+}
+ul{
+	font-family:StoneSans;
+	font-size:13px;
+	font-weight:normal;
+}
+.cParagraph{
+	font-family:StoneSans;
+	font-size:13px;
+	font-weight:normal;
+	margin-bottom:3px;
+	margin-top:0px;
+}
+.jspDrag {
+	background: #aeaeae;
+	border-radius: 10px;
+}
+.jspTrack{
+	background:#fff;
+	height:560px;
+}
+.jspVerticalBar{
+	top:20px;
+	background: #e9dbcc;
+	width: 8px;
+	margin-right: 3px;
+	padding: 2px;
+	height:560px;
+}
+.jspArrowDown{
+	position: relative;
+	bottom: 24px;
+	max-height:8px;
+	width:8px;
+	background:url("../images/cr_scrollbar_arrowBtm.png");
+	background-size:10px 10px;
+}
+.jspArrow.jspDisabled {
+	background:inherit;
+}
+.jspArrowUp{
+	max-height:8px;
+	width:8px;
+	background:url("../images/cr_scrollbar_arrowTop.png");
+	background-size:10px 10px;
+}
+/*added for questions page update*/
+.questions table {
+	margin: 15px 0 0 0;
+}
+.questions table td {
+	vertical-align: top;
+	padding: 0 15px 0 0;
+}
+.questions .cSpace {
+	margin: 10px 0 0 0;
+}

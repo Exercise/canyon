@@ -1,0 +1,34 @@
+/*jspscrollpane styles*/
+.jspDrag {
+	background: #aeaeae;
+	border-radius: 10px;
+}
+.jspTrack{
+	background:#fff;
+	height:260px;
+}
+.jspVerticalBar{
+	top:0px;
+	background: #e9dbcc;
+	width: 8px;
+	margin-right: 3px;
+	padding: 2px;
+	/*height:260px;*/
+}
+.jspArrowDown{
+	position: relative;
+	bottom: 4px;
+	max-height:8px;
+	width:8px;
+	background:url("../images/cr_scrollbar_arrowBtm.png");
+	background-size:10px 10px;
+}
+.jspArrow.jspDisabled {
+	background:inherit;
+}
+.jspArrowUp{
+	max-height:8px;
+	width:8px;
+	background:url("../images/cr_scrollbar_arrowTop.png");
+	background-size:10px 10px;
+}
