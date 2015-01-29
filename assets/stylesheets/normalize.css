@@ -75,10 +75,10 @@ sub,sup {
     vertical-align: baseline;
 }
 sup {
-    top: -0.5em;
+    top: -0.3em;
 }
 sub {
-    bottom: -0.25em;
+    bottom: -0.2em;
 }
 img {
     border: 0;
