@@ -207,6 +207,7 @@ body.text > header .content article {
 body.sales > header .content article > *,
 body.text > header .content article > * {
     font-size: 3.17em;
+    text-shadow: 0 0 1px #000000;
 }
 body.sales > header .content article h1,
 body.text > header .content article h1 {
@@ -236,6 +237,7 @@ body.text > header .content > em {
     display: block;
     font-size: 2.77em;
     margin: 0.5415em 0 0 0;
+    text-shadow: 0 0 1px #000000;
 }
 
 
