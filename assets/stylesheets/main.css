@@ -196,11 +196,17 @@ body.text > header .content {
     text-align: left;
     height: auto;
     vertical-align: middle;
+    padding: 0 2em 2em 0;
+}
+body.sales > header .content .box,
+body.text > header .content .box {
     padding: 1em 2.3em;
+    background: rgba(0, 0, 0, 0.3);
+    float: right;
 }
 body.sales > header .content article,
 body.text > header .content article {
-    width: 65.8em;
+    width: 60.5em;
     letter-spacing: 0.05em;
     margin: 0 0 3em 0;
 }
@@ -218,8 +224,8 @@ body.text > header .content article h1 {
     line-height: 1.1987em;
     width: 75%;
 }
-body.sales > header .content > a.button,
-body.text > header .content > a.button {
+body.sales > header .content .box > a.button,
+body.text > header .content .box > a.button {
     font-size: 4em;
     font-weight: 700;
     background-color: #1c99cf;
@@ -227,13 +233,13 @@ body.text > header .content > a.button {
     line-height: 2.275em;
     border-bottom: 1px rgba(28,153,207,0.5) solid;
 }
-body.sales > header .content > a.button:active,
-body.text > header .content > a.button:active {
+body.sales > header .content .box > a.button:active,
+body.text > header .content .box > a.button:active {
     border-top: 1px rgba(28,153,207,0) solid;
     border-bottom: 0 none;
 }
-body.sales > header .content > em,
-body.text > header .content > em {
+body.sales > header .content .box > em,
+body.text > header .content .box > em {
     display: block;
     font-size: 2.77em;
     margin: 0.5415em 0 0 0;
