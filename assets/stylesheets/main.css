@@ -241,7 +241,7 @@ body.text > header .content .box > a.button:active {
 body.sales > header .content .box > em,
 body.text > header .content .box > em {
     display: block;
-    font-size: 2.77em;
+    font-size: 2.5em;
     margin: 0.5415em 0 0 0;
     text-shadow: 0 0 1px #000000;
 }
